@@ -25,7 +25,7 @@ export default function HeroSection() {
   }, [])
 
   return (
-    <section className="relative h-[80vh] w-full overflow-hidden">
+    <section className="relative h-[calc(100vh-128px)] w-full overflow-hidden pt-16">
       {/* Hero Background Images */}
       {heroImages.map((imageUrl, index) => (
         <div
@@ -54,7 +54,7 @@ export default function HeroSection() {
           <button
             key={index}
             onClick={() => setCurrentImageIndex(index)}
-            className={`h-2 w-8 rounded-full transition-all ${
+            className={`h-3 w-10 rounded-full transition-all ${
               index === currentImageIndex ? "bg-[#ff8c00]" : "bg-white/50"
             }`}
             aria-label={`Ver imagen ${index + 1}`}
@@ -64,20 +64,28 @@ export default function HeroSection() {
 
       {/* Hero Content */}
       <div className="container relative z-10 mx-auto flex h-full flex-col items-center justify-center px-4 text-center md:px-6">
-        <h1 className="mb-4 text-4xl font-bold tracking-tight text-white md:text-5xl lg:text-6xl">
+        <h1 className="mb-6 text-5xl font-bold tracking-tight text-white md:text-6xl lg:text-7xl">
           <span className="text-[#ff8c00]">Proyecta3D</span> - Soluciones de Ingeniería
         </h1>
-        <p className="mb-8 max-w-2xl text-lg text-gray-200 md:text-xl">
+        <p className="mb-10 max-w-3xl text-xl text-gray-200 md:text-2xl">
           Servicios profesionales de ingeniería mecánica, impresión 3D y diseño personalizado para tus proyectos
         </p>
-        <div className="flex flex-col space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
-          <Button size="lg" className="bg-[#ff8c00] text-white hover:bg-[#e67e00]">
-            Nuestros Servicios
-            <ChevronRight className="ml-2 h-4 w-4" />
-          </Button>
-          <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10">
-            Contáctanos
-          </Button>
+        <div className="flex flex-col space-y-4 sm:flex-row sm:space-x-6 sm:space-y-0">
+          <a href="#servicios">
+            <Button size="lg" className="bg-[#ff8c00] px-8 py-7 text-lg font-semibold text-white hover:bg-[#e67e00]">
+              Nuestros Servicios
+              <ChevronRight className="ml-2 h-5 w-5" />
+            </Button>
+          </a>
+          <a href="#contacto">
+            <Button
+              size="lg"
+              variant="outline"
+              className="border-2 border-white bg-white/10 px-8 py-7 text-lg font-semibold text-white hover:bg-white/20"
+            >
+              Contáctanos
+            </Button>
+          </a>
         </div>
       </div>
     </section>

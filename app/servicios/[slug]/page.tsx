@@ -7,11 +7,13 @@ const services = [
     id: 1,
     title: "Impresión 3D Fibra de Carbono",
     slug: "impresion-3d-fibra-de-carbono",
-    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMPRE-9l064peq6nd6aCsfWojT0JhWU7qAoV.png",
+    image:
+      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/cardimpresion3D.jpg-7VoN0INt2l6WlQMp5KyxgiB86yfyAk.jpeg", // Nueva imagen de impresión 3D
     content: {
       description:
         "Fabricación de piezas con tecnología de impresión 3D utilizando fibra de carbono para mayor resistencia y durabilidad.",
-      headerImage: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMPRE-9l064peq6nd6aCsfWojT0JhWU7qAoV.png",
+      headerImage:
+        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/cardimpresion3D.jpg-7VoN0INt2l6WlQMp5KyxgiB86yfyAk.jpeg", // Nueva imagen de impresión 3D
       sections: [
         {
           title: "Tecnología Avanzada",
@@ -117,6 +119,7 @@ const services = [
         "Dado al compromiso de mejorar y brindar a nuestros clientes una excelente calidad, el departamento de ingeniería cuenta con software y herramientas especializadas en el rubro mecánico, como Solidworks, Desing X, Artec Studio. Nos apoyamos de herramientas de modelado 3D para garantizar cada diseño y poder realizar pruebas de las estructuras o piezas antes de su fabricación.\n\nContamos con escáner 3D con la precisión de hasta 0.3mm que nos permite realizar levantamiento y desarrollar planos para la fabricación de cualquier tipo de estructura o pieza mecánica.",
     },
   },
+  // Los demás servicios se mantienen igual...
   {
     id: 3,
     title: "Maestranza Mecanizado",
@@ -175,58 +178,165 @@ const services = [
   },
   {
     id: 4,
-    title: "Reparación Fabricación",
-    slug: "reparacion-fabricacion",
+    title: "Fabricación",
+    slug: "fabricacion",
     image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/impre%203d%20p-3UVEq4DM1oqzBiLI8So9TbaCy3khHv.png",
     content: {
-      description: "Servicios especializados de reparación y fabricación de piezas y componentes industriales.",
+      description: "Servicios especializados de fabricación de piezas y componentes industriales.",
       headerImage:
         "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/impre%203d%20p-3UVEq4DM1oqzBiLI8So9TbaCy3khHv.png",
       sections: [
         {
-          title: "Reparación de Componentes",
-          icon: "/placeholder.svg?height=80&width=80",
-          image: "/placeholder.svg?height=200&width=200",
-          description: "Restauración de piezas dañadas o desgastadas para extender su vida útil y reducir costos.",
+          title: "Fabricación de Componentes",
+          icon: "/modern-manufacturing-facility.png",
+          image: "/placeholder.svg?key=wyqg2",
+          description: "Producción de componentes mecánicos de alta precisión para diversas aplicaciones industriales.",
         },
         {
-          title: "Fabricación de Repuestos",
-          icon: "/placeholder.svg?height=80&width=80",
-          image: "/placeholder.svg?height=200&width=200",
-          description:
-            "Producción de piezas de repuesto para maquinaria cuando los componentes originales no están disponibles.",
+          title: "Piezas a Medida",
+          icon: "/custom-parts.png",
+          image: "/custom-manufacturing-facility.png",
+          description: "Fabricación personalizada según especificaciones exactas del cliente.",
         },
         {
-          title: "Ingeniería Inversa",
-          icon: "/placeholder.svg?height=80&width=80",
-          image: "/placeholder.svg?height=200&width=200",
-          description: "Análisis y reproducción de componentes existentes mediante escaneo 3D y modelado digital.",
+          title: "Producción en Serie",
+          icon: "/industrial-production-line.png",
+          image: "/batch-production.png",
+          description: "Capacidad para producir series medianas con consistencia y calidad garantizada.",
         },
       ],
       features: [
         {
-          title: "Nuestras Soluciones",
+          title: "Nuestras Capacidades",
           items: [
             {
-              title: "Diagnóstico Avanzado",
-              description: "Análisis detallado de fallas y desgaste para determinar la mejor solución",
-              icon: "/placeholder.svg?height=60&width=60",
+              title: "Precisión Garantizada",
+              description: "Fabricamos con tolerancias mínimas para asegurar el perfecto funcionamiento",
+              icon: "/precision-target.png",
             },
             {
-              title: "Tecnologías Combinadas",
-              description: "Integración de mecanizado tradicional e impresión 3D para soluciones óptimas",
-              icon: "/placeholder.svg?height=60&width=60",
+              title: "Materiales de Calidad",
+              description: "Utilizamos los mejores materiales para garantizar durabilidad y rendimiento",
+              icon: "/diverse-art-materials.png",
             },
             {
-              title: "Respuesta Rápida",
-              description: "Servicio ágil para minimizar tiempos de inactividad en equipos críticos",
-              icon: "/placeholder.svg?height=60&width=60",
+              title: "Personalización Total",
+              description: "Adaptamos cada proyecto a las necesidades específicas de nuestros clientes",
+              icon: "/customization-options.png",
             },
           ],
         },
       ],
       description:
-        "En Proyecta3D entendemos que el tiempo de inactividad de la maquinaria puede resultar extremadamente costoso para cualquier operación industrial. Nuestro servicio de Reparación y Fabricación está diseñado para ofrecer soluciones rápidas y efectivas cuando los componentes críticos fallan o se desgastan.\n\nCombinamos técnicas tradicionales de mecanizado con tecnologías avanzadas como la impresión 3D y el escaneo tridimensional para ofrecer el enfoque más eficiente para cada caso. Esto nos permite reparar piezas dañadas o fabricar repuestos que ya no están disponibles en el mercado.\n\nNuestro proceso comienza con un diagnóstico detallado del componente, seguido por la propuesta de la solución más adecuada en términos de costo, tiempo y durabilidad. Trabajamos con una amplia gama de materiales y acabados para garantizar que las piezas reparadas o fabricadas cumplan o superen las especificaciones originales.",
+        "En Proyecta3D, nuestra división de fabricación se especializa en la producción de componentes y piezas de alta calidad para diversas aplicaciones industriales. Combinamos tecnologías tradicionales de manufactura con métodos innovadores para ofrecer soluciones óptimas a cada desafío.\n\nNuestro equipo de técnicos e ingenieros trabaja con precisión y atención al detalle para garantizar que cada pieza cumpla con las especificaciones exactas requeridas. Desde prototipos únicos hasta series de producción, tenemos la capacidad de adaptarnos a las necesidades de cada proyecto.\n\nUtilizamos materiales de primera calidad y sometemos cada componente a rigurosos controles para asegurar su funcionalidad y durabilidad. Nuestro compromiso es ofrecer soluciones de fabricación que contribuyan al éxito de los proyectos de nuestros clientes.",
+    },
+  },
+  {
+    id: 5,
+    title: "Reparación y Arrendo de Equipos Hidráulicos",
+    slug: "reparacion-arrendo-equipos-hidraulicos",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-xr5nOsYC8TZRNPVh2NI7gzW1eBGoSs.png",
+    content: {
+      description: "Servicios de reparación, mantenimiento y arriendo de equipos hidráulicos industriales.",
+      headerImage: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-xr5nOsYC8TZRNPVh2NI7gzW1eBGoSs.png",
+      sections: [
+        {
+          title: "Reparación de Equipos",
+          icon: "/placeholder.svg?key=jdp0t",
+          image: "/placeholder.svg?height=200&width=200&query=hydraulic equipment repair",
+          description: "Diagnóstico y reparación de sistemas hidráulicos con técnicos especializados.",
+        },
+        {
+          title: "Arriendo de Equipos",
+          icon: "/placeholder.svg?height=80&width=80&query=hydraulic rental",
+          image: "/placeholder.svg?height=200&width=200&query=hydraulic equipment rental",
+          description: "Amplia gama de equipos hidráulicos disponibles para arriendo a corto y largo plazo.",
+        },
+        {
+          title: "Mantenimiento Preventivo",
+          icon: "/placeholder.svg?height=80&width=80&query=hydraulic maintenance",
+          image: "/placeholder.svg?height=200&width=200&query=hydraulic preventive maintenance",
+          description: "Programas de mantenimiento para prevenir fallas y extender la vida útil de los equipos.",
+        },
+      ],
+      features: [
+        {
+          title: "Ventajas de Nuestro Servicio",
+          items: [
+            {
+              title: "Respuesta Rápida",
+              description: "Servicio de emergencia disponible para minimizar tiempos de inactividad",
+              icon: "/placeholder.svg?height=60&width=60&query=quick response",
+            },
+            {
+              title: "Técnicos Certificados",
+              description: "Personal altamente capacitado con experiencia en sistemas hidráulicos",
+              icon: "/placeholder.svg?height=60&width=60&query=certified technicians",
+            },
+            {
+              title: "Repuestos Originales",
+              description: "Utilizamos componentes de alta calidad para garantizar durabilidad y rendimiento",
+              icon: "/placeholder.svg?height=60&width=60&query=quality parts",
+            },
+          ],
+        },
+      ],
+      description:
+        "Nuestro servicio de Reparación y Arrendo de Equipos Hidráulicos ofrece soluciones completas para mantener sus operaciones en funcionamiento óptimo. Contamos con un equipo de técnicos especializados y un amplio inventario de equipos disponibles para arriendo inmediato.\n\nEn nuestra división de reparación, diagnosticamos y solucionamos problemas en bombas, motores, cilindros, válvulas y sistemas hidráulicos completos. Utilizamos herramientas de diagnóstico avanzadas y repuestos de calidad para garantizar reparaciones duraderas.\n\nNuestro servicio de arriendo incluye una amplia gama de equipos hidráulicos como bombas, unidades de potencia, cilindros y herramientas especializadas. Todos nuestros equipos son sometidos a rigurosas inspecciones y mantenimiento preventivo antes de cada arriendo para asegurar su funcionamiento confiable.\n\nOfrecemos también programas de mantenimiento preventivo personalizados para reducir costosas averías y extender la vida útil de sus equipos hidráulicos.",
+    },
+  },
+  {
+    id: 6,
+    title: "Venta de Equipos Hidráulicos",
+    slug: "venta-equipos-hidraulicos",
+    image: "/placeholder.svg?key=i4ojc",
+    content: {
+      description: "Distribución y venta de equipos hidráulicos de alta calidad para aplicaciones industriales.",
+      headerImage: "/placeholder.svg?key=01l8b",
+      sections: [
+        {
+          title: "Bombas Hidráulicas",
+          icon: "/placeholder.svg?height=80&width=80&query=hydraulic pumps",
+          image: "/placeholder.svg?height=200&width=200&query=hydraulic pump equipment",
+          description: "Amplia gama de bombas hidráulicas para diversas aplicaciones y requerimientos de presión.",
+        },
+        {
+          title: "Cilindros y Actuadores",
+          icon: "/placeholder.svg?height=80&width=80&query=hydraulic cylinders",
+          image: "/placeholder.svg?height=200&width=200&query=hydraulic cylinders",
+          description: "Soluciones de movimiento lineal y rotativo para aplicaciones industriales.",
+        },
+        {
+          title: "Válvulas y Controles",
+          icon: "/placeholder.svg?height=80&width=80&query=hydraulic valves",
+          image: "/placeholder.svg?height=200&width=200&query=hydraulic valves",
+          description: "Sistemas de control de flujo, presión y dirección para circuitos hidráulicos.",
+        },
+      ],
+      features: [
+        {
+          title: "Por qué Elegirnos",
+          items: [
+            {
+              title: "Marcas Reconocidas",
+              description: "Distribuidores oficiales de las principales marcas del mercado",
+              icon: "/placeholder.svg?height=60&width=60&query=quality brands",
+            },
+            {
+              title: "Asesoría Técnica",
+              description: "Expertos que te ayudan a seleccionar el equipo ideal para tu aplicación",
+              icon: "/placeholder.svg?height=60&width=60&query=technical advice",
+            },
+            {
+              title: "Garantía Extendida",
+              description: "Respaldo completo y servicio post-venta para todos nuestros productos",
+              icon: "/placeholder.svg?height=60&width=60&query=warranty",
+            },
+          ],
+        },
+      ],
+      description:
+        "En Proyecta3D ofrecemos una amplia gama de equipos hidráulicos de alta calidad para diversas aplicaciones industriales. Como distribuidores autorizados de marcas líderes en el mercado, garantizamos productos confiables y con respaldo oficial.\n\nNuestro catálogo incluye bombas hidráulicas, cilindros, motores, válvulas, mangueras, accesorios y sistemas completos para aplicaciones móviles e industriales. Todos nuestros productos cumplen con los más altos estándares de calidad y eficiencia.\n\nContamos con un equipo de asesores técnicos que te ayudarán a seleccionar el equipo más adecuado para tus necesidades específicas, considerando factores como presión, caudal, potencia y condiciones de operación.\n\nAdemás de la venta, ofrecemos servicios de instalación, puesta en marcha y capacitación para asegurar el óptimo funcionamiento de tus equipos hidráulicos. Nuestro compromiso es proporcionar soluciones completas que contribuyan al éxito de tu operación.",
     },
   },
 ]

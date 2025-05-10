@@ -4,8 +4,9 @@ const services = [
   {
     id: 1,
     title: "Impresión 3D Fibra de Carbono",
-    slug: "impresion-3d-fibra-de-carbono", // Asegúrate de que este slug coincida con el de la página
-    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMPRE-9l064peq6nd6aCsfWojT0JhWU7qAoV.png",
+    slug: "impresion-3d-fibra-de-carbono",
+    image:
+      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/cardimpresion3D.jpg-7VoN0INt2l6WlQMp5KyxgiB86yfyAk.jpeg", // Nueva imagen de impresión 3D
   },
   {
     id: 2,
@@ -21,9 +22,21 @@ const services = [
   },
   {
     id: 4,
-    title: "Reparación Fabricación",
-    slug: "reparacion-fabricacion",
+    title: "Fabricación",
+    slug: "fabricacion",
     image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/impre%203d%20p-3UVEq4DM1oqzBiLI8So9TbaCy3khHv.png",
+  },
+  {
+    id: 5,
+    title: "Reparación y Arrendo de Equipos Hidráulicos",
+    slug: "reparacion-arrendo-equipos-hidraulicos",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-xr5nOsYC8TZRNPVh2NI7gzW1eBGoSs.png",
+  },
+  {
+    id: 6,
+    title: "Venta de Equipos Hidráulicos",
+    slug: "venta-equipos-hidraulicos",
+    image: "/images/equipos-hidraulicos-hexagonos.png",
   },
 ]
 
@@ -39,12 +52,12 @@ export default function ServicesSection() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 gap-8 sm:grid-cols-2">
+        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {services.map((service) => (
             <Link
               key={service.id}
               href={`/servicios/${service.slug}`}
-              className="group relative block h-80 w-full cursor-pointer overflow-hidden rounded-lg"
+              className="group relative block h-64 w-full cursor-pointer overflow-hidden rounded-lg"
             >
               {/* Imagen completa */}
               <div className="h-full w-full">
@@ -60,7 +73,7 @@ export default function ServicesSection() {
 
               {/* Título */}
               <div className="absolute bottom-0 left-0 right-0 p-6 text-center">
-                <h3 className="text-2xl font-bold text-white">{service.title}</h3>
+                <h3 className="text-xl font-bold text-white">{service.title}</h3>
               </div>
             </Link>
           ))}

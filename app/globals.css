@@ -153,6 +153,18 @@
   color: #ff8c00 !important;
 }
 
+/* Efecto de destaque para el logo */
+.logo-hero {
+  filter: drop-shadow(0 0 10px rgba(255, 140, 0, 0.5));
+  animation: logoFloat 6s ease-in-out infinite, logoGlow 4s ease-in-out infinite;
+  transform-origin: center;
+  position: relative;
+  z-index: 20;
+  margin-top: 0.5rem;
+  margin-bottom: -1rem;
+}
+
+
   .dark {
     --background: 222.2 84% 4.9%;
     --foreground: 210 40% 98%;
@@ -203,4 +215,98 @@
 .scrollbar-hide {
   -ms-overflow-style: none;
   scrollbar-width: none;
+}
+
+
+/* Animaciones para los enlaces de navegación - Más prominentes */
+.nav-link {
+  transition: color 0.3s ease;
+  position: relative;
+  padding-bottom: 4px;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 3px;
+  bottom: -4px;
+  left: 0;
+  background-color: #ff8c00;
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #ff8c00;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+/* Animaciones para los enlaces de navegación móvil */
+.nav-link-mobile {
+  transition: color 0.3s ease, transform 0.3s ease;
+  display: block;
+  position: relative;
+}
+
+.nav-link-mobile:hover {
+  color: #ff8c00;
+  transform: translateX(10px);
+}
+
+.nav-link-mobile::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 3px;
+  bottom: 0;
+  left: 0;
+  background-color: #ff8c00;
+  transition: width 0.3s ease;
+}
+
+.nav-link-mobile:hover::after {
+  width: 50%;
+}
+
+/* Efecto de destaque para el logo */
+.logo-container {
+  position: relative;
+  z-index: 10;
+  transition: all 0.4s ease;
+}
+
+.logo-container:hover {
+  transform: scale(1.15) translateY(4px) !important;
+  filter: drop-shadow(0 0 15px rgba(255, 140, 0, 0.6));
+  z-index: 20;
+}
+
+/* Reglas para el logo cuando el navbar está en estado scrolled */
+.scrolled .logo-container {
+  transform: translateY(0) !important;
+}
+
+.scrolled .logo-container:hover {
+  transform: scale(1.15) !important;
+}
+
+
+/* Animación de entrada para el logo */
+@keyframes logoEntrance {
+  0% {
+    opacity: 0;
+    transform: translateY(0px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(16px);
+  }
+}
+
+/* Aplicar animación de entrada solo en la carga inicial */
+.logo-entrance {
+  animation: logoEntrance 1s ease-out forwards;
 }
