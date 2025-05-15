@@ -60,19 +60,63 @@ export default function Navbar() {
 
           {/* Desktop Navigation con botones más grandes */}
           <nav className="hidden md:flex md:items-center md:space-x-8">
-            <Link href="/" className="nav-link relative text-lg font-semibold text-gray-800 tracking-wide">
+            <Link
+              href="/"
+              className="nav-link relative text-lg font-semibold text-gray-800 tracking-wide"
+              onClick={(e) => {
+                if (window.location.pathname === "/") {
+                  e.preventDefault()
+                  window.scrollTo({ top: 0, behavior: "smooth" })
+                }
+              }}
+            >
               Inicio
             </Link>
-            <Link href="#servicios" className="nav-link relative text-lg font-semibold text-gray-800 tracking-wide">
+            <Link
+              href="/#servicios"
+              className="nav-link relative text-lg font-semibold text-gray-800 tracking-wide"
+              onClick={(e) => {
+                if (window.location.pathname === "/") {
+                  e.preventDefault()
+                  document.getElementById("servicios")?.scrollIntoView({ behavior: "smooth" })
+                }
+              }}
+            >
               Servicios
             </Link>
-            <Link href="#nosotros" className="nav-link relative text-lg font-semibold text-gray-800 tracking-wide">
+            <Link
+              href="/#nosotros"
+              className="nav-link relative text-lg font-semibold text-gray-800 tracking-wide"
+              onClick={(e) => {
+                if (window.location.pathname === "/") {
+                  e.preventDefault()
+                  document.getElementById("nosotros")?.scrollIntoView({ behavior: "smooth" })
+                }
+              }}
+            >
               Nosotros
             </Link>
-            <Link href="#proyectos" className="nav-link relative text-lg font-semibold text-gray-800 tracking-wide">
+            <Link
+              href="/#proyectos"
+              className="nav-link relative text-lg font-semibold text-gray-800 tracking-wide"
+              onClick={(e) => {
+                if (window.location.pathname === "/") {
+                  e.preventDefault()
+                  document.getElementById("proyectos")?.scrollIntoView({ behavior: "smooth" })
+                }
+              }}
+            >
               Proyectos
             </Link>
-            <Link href="#contacto">
+            <Link
+              href="/#contacto"
+              onClick={(e) => {
+                if (window.location.pathname === "/") {
+                  e.preventDefault()
+                  document.getElementById("contacto")?.scrollIntoView({ behavior: "smooth" })
+                }
+              }}
+            >
               <Button className="bg-[#ff8c00] text-white px-6 py-6 text-lg font-semibold transition-transform duration-300 hover:scale-105 hover:bg-[#e67e00]">
                 Contacto
               </Button>
@@ -99,42 +143,72 @@ export default function Navbar() {
           </div>
           <div className="flex justify-center mb-8">
             <div className="relative h-40 w-[400px]">
-              <Image src="/logo.png" alt="Proyecta3D Logo" fill priority className="object-contain" />
+              <Image src="/logo-nuevo.png" alt="Proyecta3D Logo" fill priority className="object-contain" />
             </div>
           </div>
           <nav className="container mx-auto flex flex-col space-y-6 px-4">
             <Link
               href="/"
               className="nav-link-mobile relative py-3 text-xl font-semibold text-gray-800"
-              onClick={toggleMenu}
+              onClick={(e) => {
+                toggleMenu()
+                if (window.location.pathname === "/") {
+                  e.preventDefault()
+                  window.scrollTo({ top: 0, behavior: "smooth" })
+                }
+              }}
             >
               Inicio
             </Link>
             <Link
-              href="#servicios"
+              href="/#servicios"
               className="nav-link-mobile relative py-3 text-xl font-semibold text-gray-800"
-              onClick={toggleMenu}
+              onClick={(e) => {
+                toggleMenu()
+                if (window.location.pathname === "/") {
+                  e.preventDefault()
+                  document.getElementById("servicios")?.scrollIntoView({ behavior: "smooth" })
+                }
+              }}
             >
               Servicios
             </Link>
             <Link
-              href="#nosotros"
+              href="/#nosotros"
               className="nav-link-mobile relative py-3 text-xl font-semibold text-gray-800"
-              onClick={toggleMenu}
+              onClick={(e) => {
+                toggleMenu()
+                if (window.location.pathname === "/") {
+                  e.preventDefault()
+                  document.getElementById("nosotros")?.scrollIntoView({ behavior: "smooth" })
+                }
+              }}
             >
               Nosotros
             </Link>
             <Link
-              href="#proyectos"
+              href="/#proyectos"
               className="nav-link-mobile relative py-3 text-xl font-semibold text-gray-800"
-              onClick={toggleMenu}
+              onClick={(e) => {
+                toggleMenu()
+                if (window.location.pathname === "/") {
+                  e.preventDefault()
+                  document.getElementById("proyectos")?.scrollIntoView({ behavior: "smooth" })
+                }
+              }}
             >
               Proyectos
             </Link>
             <Link
-              href="#contacto"
+              href="/#contacto"
               className="nav-link-mobile relative py-3 text-xl font-semibold text-gray-800"
-              onClick={toggleMenu}
+              onClick={(e) => {
+                toggleMenu()
+                if (window.location.pathname === "/") {
+                  e.preventDefault()
+                  document.getElementById("contacto")?.scrollIntoView({ behavior: "smooth" })
+                }
+              }}
             >
               Contacto
             </Link>

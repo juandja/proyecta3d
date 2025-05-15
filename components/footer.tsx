@@ -15,19 +15,20 @@ export default function Footer() {
           unoptimized
         />
 
-        {/* Overlay oscuro central */}
-        <div className="absolute inset-0 bg-gradient-to-r from-white via-black/70 to-white"></div>
+        {/* Overlay oscuro principal - aumentado la opacidad */}
+        <div className="absolute inset-0 bg-black/85"></div>
 
-        {/* Degradado blanco reducido en los extremos */}
-        <div className="absolute left-0 top-0 h-full w-1/6 bg-gradient-to-r from-white to-transparent"></div>
-        <div className="absolute right-0 top-0 h-full w-1/6 bg-gradient-to-l from-white to-transparent"></div>
+        {/* Degradados blancos mejorados */}
+        <div className="absolute left-0 top-0 h-full w-[15%] bg-gradient-to-r from-white/40 to-transparent"></div>
+        <div className="absolute right-0 top-0 h-full w-[15%] bg-gradient-to-l from-white/40 to-transparent"></div>
+        <div className="absolute bottom-0 left-0 right-0 h-[30%] bg-gradient-to-t from-black/90 to-transparent"></div>
       </div>
 
       <div className="container relative z-10 mx-auto px-4 py-12 md:px-6">
         <div className="grid grid-cols-1 gap-8 md:grid-cols-3 lg:grid-cols-4">
           <div className="flex flex-col items-center justify-center md:items-start">
             <Link href="/" className="flex items-center justify-center md:items-start">
-              <div className="relative h-40 w-[400px]">
+              <div className="relative h-40 w-[400px] drop-shadow-[0_0_15px_rgba(255,255,255,0.5)]">
                 <Image src="/logo.png" alt="Proyecta3D Logo" fill className="object-contain" priority />
               </div>
             </Link>

@@ -21,7 +21,7 @@ const projects = [
     id: 3,
     title: "Sistema de Ventilación",
     category: "diseno",
-    image: "/placeholder.svg?height=400&width=600",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/diseno-mecanico-corte-Yd9Nt9Yx9Yd9Nt9Yx.png",
     description: "Diseño e implementación de sistema de ventilación optimizado para entornos industriales.",
   },
   {
@@ -42,8 +42,29 @@ const projects = [
     id: 6,
     title: "Moldes Industriales",
     category: "diseno",
-    image: "/placeholder.svg?height=400&width=600",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/diseno-3d-eje-Yd9Nt9Yx9Yd9Nt9Yx.jpeg",
     description: "Diseño y fabricación de moldes industriales para producción en serie.",
+  },
+  {
+    id: 7,
+    title: "Análisis de Elementos Finitos",
+    category: "diseno",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/analisis-elementos-finitos-Yd9Nt9Yx9Yd9Nt9Yx.jpeg",
+    description: "Simulación y análisis estructural para validar la integridad de componentes críticos.",
+  },
+  {
+    id: 8,
+    title: "Diseño Mecánico 3D",
+    category: "diseno",
+    image: "/placeholder?query=3d+mechanical+design+with+gears+and+components",
+    description: "Modelado 3D de componentes mecánicos con alta precisión para fabricación.",
+  },
+  {
+    id: 9,
+    title: "Piezas Industriales Personalizadas",
+    category: "diseno",
+    image: "/placeholder?query=custom+industrial+parts+and+components+design",
+    description: "Diseño de piezas a medida para aplicaciones industriales específicas.",
   },
 ]
 
