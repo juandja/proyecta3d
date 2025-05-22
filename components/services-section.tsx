@@ -16,13 +16,13 @@ const services = [
   },
   {
     id: 3,
-    title: "Maestranza Mecanizado",
+    title: "Maestranza, Máquinas y Herramientas",
     slug: "maestranza-mecanizado",
     image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/MAES-YDzlUOHZHTbzKANBJoWXUSoyG6tJF0.png",
   },
   {
     id: 4,
-    title: "Fabricación",
+    title: "Fabricación Estructural/Piping",
     slug: "fabricacion",
     image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/impre%203d%20p-3UVEq4DM1oqzBiLI8So9TbaCy3khHv.png",
   },

@@ -7,9 +7,10 @@ import { ChevronRight } from "lucide-react"
 
 // Usar directamente las URLs de las imágenes proporcionadas
 const heroImages = [
+  "/images/hero/hero-soldador.png",  
   "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/CNC-m2UV6uoJkBrabSYX8KRwXG0gSI5MgC.png", // CNC
-  "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/PZ-CzwkERCPpf7wKFOGQ3rStxqR93zJhO.png", // Piezas impresas
-  "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/maquetas-mcP9i6bzBK53dSH8ars7dIhNTiTRBD.png", // Maquetas
+  "/images/hero/cardimpresion3D5.jpg", // Piezas impresas 
+  "/images/hero/cardimpresion3D3.jpg", // Maquetas
 ]
 
 export default function HeroSection() {
@@ -64,11 +65,12 @@ export default function HeroSection() {
 
       {/* Hero Content */}
       <div className="container relative z-10 mx-auto flex h-full flex-col items-center justify-center px-4 text-center md:px-6">
-        <h1 className="mb-6 text-5xl font-bold tracking-tight text-white md:text-6xl lg:text-7xl">
-          <span className="text-[#ff8c00]">Proyecta3D</span> - Soluciones de Ingeniería
-        </h1>
+        <h1 className="mb-2 text-6xl font-bold tracking-tight text-[#ff8c00] md:text-7xl lg:text-8xl">Proyecta3D</h1>
+        <h2 className="mb-6 text-3xl font-semibold tracking-wider text-white md:text-4xl">
+          INGENIERÍA, DISEÑO E INNOVACIÓN
+        </h2>
         <p className="mb-10 max-w-3xl text-xl text-gray-200 md:text-2xl">
-          Servicios profesionales de ingeniería mecánica, impresión 3D y diseño personalizado para tus proyectos
+          {/* Servicios profesionales de ingeniería mecánica, impresión 3D y diseño personalizado para tus proyectos */}
         </p>
         <div className="flex flex-col space-y-4 sm:flex-row sm:space-x-6 sm:space-y-0">
           <a href="#servicios">

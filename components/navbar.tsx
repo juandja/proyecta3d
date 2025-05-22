@@ -44,7 +44,7 @@ export default function Navbar() {
             <Link href="/" className="block overflow-visible hover:z-20">
               <div
                 className={`logo-container relative transition-all duration-500 ${
-                  scrolled ? "h-28 w-[280px] translate-y-0" : "h-40 w-[400px] translate-y-4"
+                  scrolled ? "h-28 w-[280px] translate-y-0" : "h-32 w-[350px] translate-y-0"
                 }`}
               >
                 <Image
