@@ -1,5 +1,8 @@
+"use client"
+
 import Link from "next/link"
 import { ArrowLeft, ChevronLeft, Download } from "lucide-react"
+import { useState } from "react"
 
 
 // Datos de servicios
@@ -13,7 +16,7 @@ const services = [
     content: {
       description:
         "Tecnología de vanguardia para fabricar piezas con propiedades mecánicas excepcionales, combinando la versatilidad de la fabricación aditiva con la resistencia de los materiales compuestos.",
-      headerImage: "/images/impresion3d/cardimpresion3D5.jpg",
+      headerImage: "/images/impresion3d/imp3d2.png",
       // Reemplazamos las secciones anteriores por la nueva sección de "Partes y Piezas"
       partesYPiezas: {
         title: "Partes y Piezas",
@@ -284,7 +287,7 @@ const services = [
         },
       ],
       description:
-        "Dado al compromiso de mejorar y brindar a nuestros clientes una excelente calidad, el departamento de ingeniería cuenta con software y herramientas especializadas en el rubro mecánico, como Solidworks, Desing X, Artec Studio. Nos apoyamos de herramientas de modelado 3D para garantizar cada diseño y poder realizar pruebas de las estructuras o piezas antes de su fabricación.\n\nContamos con escáner 3D con la precisión de hasta 0.3mm que nos permite realizar levantamiento y desarrollar planos para la fabricación de cualquier tipo de estructura o pieza mecánica.",
+        "Nuestro departamento de ingeniería cuenta con un staff altamente calificado, con herramientas que nos proporcionan realizar levantamientos y re ingeniería con calidad y presión milimétrica.\n\nContamos con equipos y software de calidad como SolidWorks – Desing X para el modelado 3D y procesado de nube de puntos.",
     },
   },
   // Los demás servicios se mantienen igual...
@@ -341,7 +344,7 @@ const services = [
         },
       ],
       description:
-        "Nuestro servicio de Maestranza y Mecanizado ofrece soluciones integrales para la fabricación de piezas y componentes mecánicos con los más altos estándares de calidad. Contamos con un taller equipado con tecnología de punta y operado por técnicos altamente calificados.\n\nNos especializamos en la fabricación de piezas a medida según planos o muestras, utilizando procesos de mecanizado CNC que garantizan precisión y repetibilidad. Nuestras capacidades incluyen torneado, fresado, taladrado, roscado y rectificado de superficies.\n\nTrabajamos con una amplia gama de materiales, incluyendo diferentes tipos de aceros, aluminio, latón, bronce, titanio y plásticos técnicos. Cada pieza fabricada pasa por rigurosos controles de calidad para asegurar que cumple con las especificaciones requeridas.",
+        "Nuestro personal cuenta con herramientas de medición certificadas y calibradas que nos permiten mantener la calidad en cada trabajo realizado, nuestros equipos cuentan con mantenimiento programado con la finalidad de mantener a nuestros clientes satisfechos día a día.\n\nNuestra maestranza cuanta con equipos como Tornos Convencionales, fresadoras centro de mecanizado y torno CNC.",
     },
   },
   {
@@ -396,7 +399,7 @@ const services = [
         },
       ],
       description:
-        "En Proyecta3D, nuestra división de fabricación se especializa en la producción de componentes y piezas de alta calidad para diversas aplicaciones industriales. Combinamos tecnologías tradicionales de manufactura con métodos innovadores para ofrecer soluciones óptimas a cada desafío.\n\nNuestro equipo de técnicos e ingenieros trabaja con precisión y atención al detalle para garantizar que cada pieza cumpla con las especificaciones exactas requeridas. Desde prototipos únicos hasta series de producción, tenemos la capacidad de adaptarnos a las necesidades de cada proyecto.\n\nUtilizamos materiales de primera calidad y sometemos cada componente a rigurosos controles para asegurar su funcionalidad y durabilidad. Nuestro compromiso es ofrecer soluciones de fabricación que contribuyan al éxito de los proyectos de nuestros clientes.",
+        "En nuestra empresa contamos con personal altamente acidifico desde 5G hasta 6G, con experiencia en materiales especiales como Super Dúplex y titanio. El área de Fabricación o calderería cuenta con un área de 330 m²2  exclusiva para la fabricación estructural y piping.",
     },
   },
   {
@@ -408,49 +411,13 @@ const services = [
       description: "Servicios de reparación, mantenimiento y arriendo de equipos hidráulicos industriales.",
       headerImage: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-xr5nOsYC8TZRNPVh2NI7gzW1eBGoSs.png",
       sections: [
-        {
-          title: "Reparación de Equipos",
-          icon: "/placeholder.svg?key=jdp0t",
-          image: "/placeholder.svg?key=w46ji",
-          description: "Diagnóstico y reparación de sistemas hidráulicos con técnicos especializados.",
-        },
-        {
-          title: "Arriendo de Equipos",
-          icon: "/placeholder.svg?key=pqk84",
-          image: "/placeholder.svg?key=j4zz7",
-          description: "Amplia gama de equipos hidráulicos disponibles para arriendo a corto y largo plazo.",
-        },
-        {
-          title: "Mantenimiento Preventivo",
-          icon: "/placeholder.svg?key=cektb",
-          image: "/placeholder.svg?key=ytixw",
-          description: "Programas de mantenimiento para prevenir fallas y extender la vida útil de los equipos.",
-        },
+       
       ],
       features: [
-        {
-          title: "Ventajas de Nuestro Servicio",
-          items: [
-            {
-              title: "Respuesta Rápida",
-              description: "Servicio de emergencia disponible para minimizar tiempos de inactividad",
-              icon: "/placeholder.svg?key=ho1fc",
-            },
-            {
-              title: "Técnicos Certificados",
-              description: "Personal altamente capacitado con experiencia en sistemas hidráulicos",
-              icon: "/placeholder.svg?key=hqz2e",
-            },
-            {
-              title: "Repuestos Originales",
-              description: "Utilizamos componentes de alta calidad para garantizar durabilidad y rendimiento",
-              icon: "/placeholder.svg?key=w5z85",
-            },
-          ],
-        },
+
       ],
       description:
-        "Nuestro servicio de Reparación y Arrendo de Equipos Hidráulicos ofrece soluciones completas para mantener sus operaciones en funcionamiento óptimo. Contamos con un equipo de técnicos especializados y un amplio inventario de equipos disponibles para arriendo inmediato.\n\nEn nuestra división de reparación, diagnosticamos y solucionamos problemas en bombas, motores, cilindros, válvulas y sistemas hidráulicos completos. Utilizamos herramientas de diagnóstico avanzadas y repuestos de calidad para garantizar reparaciones duraderas.\n\nNuestro servicio de arriendo incluye una amplia gama de equipos hidráulicos como bombas, unidades de potencia, cilindros y herramientas especializadas. Todos nuestros equipos son sometidos a rigurosas inspecciones y mantenimiento preventivo antes de cada arriendo para asegurar su funcionamiento confiable.\n\nOfrecemos también programas de mantenimiento preventivo personalizados para reducir costosas averías y extender la vida útil de sus equipos hidráulicos.",
+        "Proyecta 3D cuenta con un equipo calificado en el área de mantenciones, reparación, calibración y certificación de todo equipo hidráulico, neumático, eléctrico y electrónico. También contamos con ingenieros calificados para realizar trabajos en fabricación y mantención de redes neumáticas. Nos especializamos en mantención y reparación de equipos autónomos (compresores, generadores, soldadoras y luminarias), entre otros.",
     },
   },
   {
@@ -536,6 +503,7 @@ const services = [
 
 export default function ServicePage({ params }: { params: { slug: string } }) {
   const service = services.find((s) => s.slug === params.slug)
+  const [isEquipmentListOpen, setIsEquipmentListOpen] = useState(false)
 
   // Si no se encuentra el servicio, mostrar una página genérica en lugar de 404
   if (!service) {
@@ -708,7 +676,9 @@ export default function ServicePage({ params }: { params: { slug: string } }) {
                   )}
                 </div>
                 <h3 className="mb-2 text-xl font-bold">{item.title}</h3>
-                <p className="text-gray-600">{item.description}</p>
+                <div className="h-12">
+                  <p className="text-gray-600">{item.description}</p>
+                </div>
                 <div className="mt-4 h-48 w-full overflow-hidden rounded-lg">
                   {index === 0 && (
                     <img
@@ -1079,6 +1049,501 @@ export default function ServicePage({ params }: { params: { slug: string } }) {
           <div dangerouslySetInnerHTML={{ __html: service.content.extendedContent }} />
         </div>
       )}
+
+      {/* Sección de Equipos Disponibles para Arriendo */}
+      {service.slug === "reparacion-arrendo-equipos-hidraulicos" && (
+        <div className="bg-white py-16">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-12">
+              <h2 className="text-4xl font-bold mb-4">
+                <span className="text-[#ff8c00]">ARRIENDO</span>
+              </h2>
+              <p className="text-xl text-gray-700 max-w-4xl mx-auto">
+                NUESTRA EMPRESA CUENTA CON UNA AMPLIA GAMA DE EQUIPOS PARA ARRIENDO:
+              </p>
+            </div>
+
+            <div className="max-w-4xl mx-auto">
+              <div className="bg-white border-4 border-black rounded-lg overflow-hidden shadow-lg">
+              <button
+                  onClick={() => setIsEquipmentListOpen(!isEquipmentListOpen)}
+                  className="w-full bg-gray-200 border-b-2 border-black p-4 hover:bg-gray-300 transition-colors flex items-center justify-between"
+                >
+                  <h3 className="text-xl font-bold text-black">
+                    Listados de equipos disponibles para arriendo ({24} equipos)
+                  </h3>
+                  <div className="flex items-center space-x-2">
+                    <span className="text-sm text-gray-600">
+                      {isEquipmentListOpen ? "Ocultar lista" : `Ver ${24} equipos disponibles`}
+                    </span>
+                    <svg
+                      className={`h-6 w-6 text-black transition-transform duration-300 ${
+                        isEquipmentListOpen ? "rotate-180" : ""
+                      }`}
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                    </svg>
+                  </div>
+                </button>
+                <div
+                  className={`transition-all duration-500 ease-in-out overflow-hidden ${
+                    isEquipmentListOpen ? "max-h-[1200px] opacity-100" : "max-h-0 opacity-0"
+                  }`}
+                >
+                </div>
+
+                <div className="divide-y-2 divide-black">
+                  {[
+                    "B-RAD 1000",
+                    "DB-RAD 1000 NGX CORTA Y LARGA",
+                    "RAD 1800",
+                    "RAD 34GX",
+                    "RAD 60DX",
+                    "B-RAD 1500-2",
+                    "B-RAD 5000",
+                    "E-RAD 2500",
+                    "E-RAD 3000",
+                    "GATA ENERPAC 200TON, PRASA20016",
+                    "GATA ENERPAC 200TON, PRASA20027",
+                    "BOMBAS ELECTRO-HIDRAULICAS 10.000PSI TORQUE C/MANGUERA",
+                    "CABEZAL 3MXT",
+                    "CABEZAL 5MXT",
+                    "CABEZAL 10MXT",
+                    'LLAVE IMPACTO BATERIA 3/4"',
+                    'LLAVE DE IMPACTO BATERIA 1/2"',
+                    'LLAVE DE IMPACTO ELECTRICA 3/4"',
+                    'LLAVE DE IMPACTO ELECTRICA 1/2"',
+                    "CABEZAL TIPO CASSETE LINK 70 A 95MM",
+                    "CABEZAL TIPO CASSETE LINK 55MM",
+                    "CILINDRO VARIOS HASTA 100 TONS",
+                    "BOMBAS MANUAL TIPO P-80",
+                    "CARGADOR PARTIDOR BOOSTER 12V A 24V",
+                  ].map((equipo, index) => (
+                    <div key={index} className="p-4 hover:bg-gray-50 transition-colors">
+                      <div className="flex items-center justify-between">
+                        <span className="font-medium text-gray-800">{equipo}</span>
+                        <div className="flex items-center space-x-2">
+                          <span className="inline-block w-3 h-3 bg-green-500 rounded-full"></span>
+                          <span className="text-sm text-green-600 font-medium">Disponible</span>
+                        </div>
+                      </div>
+                    </div>
+                  ))}
+
+                  <div className="p-4 bg-[#ff8c00] text-white">
+                    <div className="flex items-start space-x-3">
+                      <svg
+                        className="h-6 w-6 mt-0.5 flex-shrink-0"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                        />
+                      </svg>
+                      <div>
+                        <p className="font-semibold">CONSULTAR POR SU EQUIPO</p>
+                        <p className="text-sm text-orange-100">YA QUE TENEMOS SEMANAL UN INGRESO NUEVO</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div className="bg-gray-100 p-6 rounded-lg text-center">
+                  <div className="w-16 h-16 bg-[#ff8c00] rounded-full flex items-center justify-center mx-auto mb-4">
+                    <svg className="h-8 w-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
+                      />
+                    </svg>
+                  </div>
+                  <h4 className="font-bold text-lg mb-2">Disponibilidad Inmediata</h4>
+                  <p className="text-gray-600">Equipos listos para entrega el mismo día</p>
+                </div>
+
+                <div className="bg-gray-100 p-6 rounded-lg text-center">
+                  <div className="w-16 h-16 bg-[#ff8c00] rounded-full flex items-center justify-center mx-auto mb-4">
+                    <svg className="h-8 w-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                      />
+                    </svg>
+                  </div>
+                  <h4 className="font-bold text-lg mb-2">Equipos Certificados</h4>
+                  <p className="text-gray-600">Todos nuestros equipos están calibrados y certificados</p>
+                </div>
+
+                <div className="bg-gray-100 p-6 rounded-lg text-center">
+                  <div className="w-16 h-16 bg-[#ff8c00] rounded-full flex items-center justify-center mx-auto mb-4">
+                    <svg className="h-8 w-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192L5.636 18.364M12 2.25a9.75 9.75 0 109.75 9.75A9.75 9.75 0 0012 2.25z"
+                      />
+                    </svg>
+                  </div>
+                  <h4 className="font-bold text-lg mb-2">Soporte Técnico</h4>
+                  <p className="text-gray-600">Asesoría especializada durante todo el período de arriendo</p>
+                </div>
+              </div>
+
+              
+            </div>
+          </div>
+
+      )}
+
+            {/* Sección de Servicios Mejorada */}
+      {service.slug === "reparacion-arrendo-equipos-hidraulicos" && (
+        <div className="bg-gray-100 py-16">
+          <div className="container mx-auto px-4">
+            {/* Introducción mejorada */}
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold mb-6">
+                <span className="text-proyecta-dark">Nuestros </span>
+                <span className="text-[#ff8c00]">Servicios Especializados</span>
+              </h2>
+              <div className="max-w-4xl mx-auto">
+                <p className="text-xl text-gray-700 mb-6 leading-relaxed">
+                  En Proyecta3D entendemos que el tiempo de inactividad de equipos hidráulicos puede resultar
+                  extremadamente costoso para cualquier operación industrial. Por eso, hemos desarrollado un servicio
+                  integral que combina <strong>experiencia técnica</strong>,{" "}
+                  <strong>equipos de última generación</strong> y <strong>respuesta inmediata</strong> para mantener sus
+                  operaciones funcionando sin interrupciones.
+                </p>
+                <div className="bg-[#ff8c00] text-white p-6 rounded-lg">
+                  <p className="text-lg font-semibold">
+                    "Más de 5 años de experiencia nos respaldan como líderes en soluciones hidráulicas industriales"
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Grid de servicios mejorado */}
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+              {/* Reparación de Equipos */}
+              <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                <div className="p-8">
+                  <div className="flex items-center justify-center w-20 h-20 bg-gradient-to-br from-[#ff8c00] to-[#e67e00] rounded-full mx-auto mb-6">
+                    <svg className="h-10 w-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"
+                      />
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
+                      />
+                    </svg>
+                  </div>
+                  <h3 className="text-2xl font-bold text-center mb-4 text-gray-800">REPARACIÓN DE EQUIPOS</h3>
+                  <p className="text-gray-600 text-center mb-6">
+                    Diagnóstico avanzado y reparación especializada de sistemas hidráulicos con técnicos certificados y
+                    repuestos originales.
+                  </p>
+
+                  <div className="space-y-3 mb-6">
+                    <div className="flex items-start space-x-3">
+                      <div className="w-2 h-2 bg-[#ff8c00] rounded-full mt-2 flex-shrink-0"></div>
+                      <span className="text-sm text-gray-700">Diagnóstico con equipos de última generación</span>
+                    </div>
+                    <div className="flex items-start space-x-3">
+                      <div className="w-2 h-2 bg-[#ff8c00] rounded-full mt-2 flex-shrink-0"></div>
+                      <span className="text-sm text-gray-700">Técnicos certificados por fabricantes</span>
+                    </div>
+                    <div className="flex items-start space-x-3">
+                      <div className="w-2 h-2 bg-[#ff8c00] rounded-full mt-2 flex-shrink-0"></div>
+                      <span className="text-sm text-gray-700">Garantía extendida en todas las reparaciones</span>
+                    </div>
+                    <div className="flex items-start space-x-3">
+                      <div className="w-2 h-2 bg-[#ff8c00] rounded-full mt-2 flex-shrink-0"></div>
+                      <span className="text-sm text-gray-700">Servicio de emergencia 24/7</span>
+                    </div>
+                  </div>
+
+                  <div className="bg-gray-50 p-4 rounded-lg">
+                    <p className="text-xs text-gray-600 text-center">
+                      <strong>Tiempo promedio de reparación:</strong> 24-48 horas
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Arriendo de Equipos */}
+              <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 border-2 border-[#ff8c00]">
+                <div className="bg-gradient-to-r from-[#ff8c00] to-[#e67e00] p-2">
+                  <p className="text-white text-center font-semibold text-sm">⭐ SERVICIO DESTACADO</p>
+                </div>
+                <div className="p-8">
+                  <div className="flex items-center justify-center w-20 h-20 bg-gradient-to-br from-[#ff8c00] to-[#e67e00] rounded-full mx-auto mb-6">
+                    <svg className="h-10 w-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
+                      />
+                    </svg>
+                  </div>
+                  <h3 className="text-2xl font-bold text-center mb-4 text-gray-800">ARRIENDO DE EQUIPOS</h3>
+                  <p className="text-gray-600 text-center mb-6">
+                    Amplia flota de equipos hidráulicos de última generación disponibles para proyectos de cualquier
+                    duración y complejidad.
+                  </p>
+
+                  <div className="space-y-3 mb-6">
+                    <div className="flex items-start space-x-3">
+                      <div className="w-2 h-2 bg-[#ff8c00] rounded-full mt-2 flex-shrink-0"></div>
+                      <span className="text-sm text-gray-700">Más de 50 equipos especializados disponibles</span>
+                    </div>
+                    <div className="flex items-start space-x-3">
+                      <div className="w-2 h-2 bg-[#ff8c00] rounded-full mt-2 flex-shrink-0"></div>
+                      <span className="text-sm text-gray-700">Entrega e instalación en sitio</span>
+                    </div>
+                    <div className="flex items-start space-x-3">
+                      <div className="w-2 h-2 bg-[#ff8c00] rounded-full mt-2 flex-shrink-0"></div>
+                      <span className="text-sm text-gray-700">Capacitación de operadores incluida</span>
+                    </div>
+                    <div className="flex items-start space-x-3">
+                      <div className="w-2 h-2 bg-[#ff8c00] rounded-full mt-2 flex-shrink-0"></div>
+                      <span className="text-sm text-gray-700">Soporte técnico durante todo el arriendo</span>
+                    </div>
+                  </div>
+
+                  <div className="bg-gradient-to-r from-[#ff8c00] to-[#e67e00] p-4 rounded-lg text-white">
+                    <p className="text-xs text-center">
+                      <strong>Disponibilidad:</strong> Inmediata • <strong>Modalidades:</strong> Diario, Semanal,
+                      Mensual
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Mantenimiento Preventivo */}
+              <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                <div className="p-8">
+                  <div className="flex items-center justify-center w-20 h-20 bg-gradient-to-br from-[#ff8c00] to-[#e67e00] rounded-full mx-auto mb-6">
+                    <svg className="h-10 w-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                      />
+                    </svg>
+                  </div>
+                  <h3 className="text-2xl font-bold text-center mb-4 text-gray-800">MANTENIMIENTO PREVENTIVO</h3>
+                  <p className="text-gray-600 text-center mb-6">
+                    Programas personalizados de mantenimiento para maximizar la vida útil de sus equipos y prevenir
+                    costosas averías.
+                  </p>
+
+                  <div className="space-y-3 mb-6">
+                    <div className="flex items-start space-x-3">
+                      <div className="w-2 h-2 bg-[#ff8c00] rounded-full mt-2 flex-shrink-0"></div>
+                      <span className="text-sm text-gray-700">Inspecciones programadas y reportes detallados</span>
+                    </div>
+                    <div className="flex items-start space-x-3">
+                      <div className="w-2 h-2 bg-[#ff8c00] rounded-full mt-2 flex-shrink-0"></div>
+                      <span className="text-sm text-gray-700">Cambio de fluidos y filtros especializados</span>
+                    </div>
+                    <div className="flex items-start space-x-3">
+                      <div className="w-2 h-2 bg-[#ff8c00] rounded-full mt-2 flex-shrink-0"></div>
+                      <span className="text-sm text-gray-700">Calibración y ajustes de precisión</span>
+                    </div>
+                    <div className="flex items-start space-x-3">
+                      <div className="w-2 h-2 bg-[#ff8c00] rounded-full mt-2 flex-shrink-0"></div>
+                      <span className="text-sm text-gray-700">Historial digital de mantenimientos</span>
+                    </div>
+                  </div>
+
+                  <div className="bg-gray-50 p-4 rounded-lg">
+                    <p className="text-xs text-gray-600 text-center">
+                      <strong>Ahorro promedio:</strong> 40% en costos de reparación
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
+
+
+
+      {/* Galería de Equipos */}
+      {service.slug === "reparacion-arrendo-equipos-hidraulicos" && (
+        <div className="bg-gray-50 py-16">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-12">
+              <h2 className="text-4xl font-bold mb-4">
+                <span className="text-proyecta-dark">Galería de </span>
+                <span className="text-[#ff8c00]">Equipos</span>
+              </h2>
+              <p className="text-xl text-gray-700 max-w-4xl mx-auto">
+                Conoce visualmente algunos de nuestros equipos hidráulicos disponibles para arriendo
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+              {[
+                {
+                  image:
+                    "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/equipo_1-NNWFVGTW7ahkRhg19Ir4K3wrF9NtMB.png",
+                  title: "Herramienta de Torque con Batería",
+                  description: "Kit completo con maletín protector",
+                },
+                {
+                  image:
+                    "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/equipo_2-mHhxEc91BR3G3bDNnI7CgAUBmrQ9vg.png",
+                  title: "Unidad de Potencia Hidráulica",
+                  description: "Bomba portátil con manómetro",
+                },
+                {
+                  image:
+                    "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/equipo_3-DMw6DLDvRlDLOqBuh2pTtvVtgXtkbT.png",
+                  title: "Llave de Impacto Neumática",
+                  description: "Herramienta de alta potencia",
+                },
+                {
+                  image:
+                    "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/equipo_4-LO68vA8qbYQgajvI1oF4Xt0hkpJ6Sw.png",
+                  title: "Herramienta Hidráulica Azul",
+                  description: "En maletín protector rojo",
+                },
+                {
+                  image:
+                    "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/equipo_5-maG8kaevoKfioGKKC8DeirwR9OF1iF.png",
+                  title: "Llave Hidráulica Roja",
+                  description: "Herramienta de precisión",
+                },
+                {
+                  image:
+                    "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/equipo_6-lg32decC5yJBHULJVEJCHCTE46gY2x.png",
+                  title: "Llave de Torque Extendida",
+                  description: "Para aplicaciones de alto torque",
+                },
+                {
+                  image:
+                    "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/equipo_7-WVIM6uISq2Zm6SEUC73TZSTmFdmVs9.png",
+                  title: "Cilindro Hidráulico Enerpac",
+                  description: "Cilindro amarillo con documentación",
+                },
+                {
+                  image:
+                    "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/equipo_8-IH6M3pwLPX5XXUpb7S2sf4pKzzmYk8.png",
+                  title: "Herramienta Roja con Batería",
+                  description: "Kit completo con accesorios",
+                },
+                {
+                  image:
+                    "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/equipo_9-Vcb7IiLwTGPrN2OSKjWMVR2b6jVo7s.png",
+                  title: "Kit de Herramientas Completo",
+                  description: "Maletín con múltiples componentes",
+                },
+                {
+                  image:
+                    "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/equipo_10-LOHpc4sbaYf9cdw7orwYubHrT4TIb7.png",
+                  title: "Bomba Hidráulica con Mangueras",
+                  description: "Sistema completo con control",
+                },
+              ].map((equipo, index) => (
+                <div
+                  key={index}
+                  className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300"
+                >
+                  <div className="aspect-square overflow-hidden bg-gray-100">
+                    <img
+                      src={equipo.image || "/placeholder.svg"}
+                      alt={equipo.title}
+                      className="w-full h-full object-contain p-4 hover:scale-105 transition-transform duration-300"
+                    />
+                  </div>
+                  <div className="p-4">
+                    <h3 className="font-bold text-lg mb-2 text-gray-800">{equipo.title}</h3>
+                    <p className="text-gray-600 text-sm">{equipo.description}</p>
+                    <div className="mt-3 flex items-center justify-between">
+                      <span className="inline-flex items-center text-green-600 text-sm font-medium">
+                        <span className="w-2 h-2 bg-green-500 rounded-full mr-2"></span>
+                        Disponible
+                      </span>
+                      <button className="text-[#ff8c00] hover:text-[#e67e00] font-medium text-sm transition-colors">
+                        Ver detalles
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            {/* Call to Action para la galería */}
+            <div className="mt-12 text-center">
+              <div className="bg-white rounded-lg p-8 shadow-md">
+                <h3 className="text-2xl font-bold mb-4 text-gray-800">
+                  ¿Necesitas más información sobre algún equipo?
+                </h3>
+                <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
+                  Nuestro equipo técnico puede proporcionarte especificaciones detalladas, manuales de operación y
+                  asesoría personalizada para cada herramienta.
+                </p>
+                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                  <a
+                    href="/#contacto"
+                    className="inline-flex items-center justify-center bg-[#ff8c00] text-white px-6 py-3 rounded-lg font-semibold hover:bg-[#e67e00] transition-colors"
+                  >
+                    Consultar Disponibilidad
+                    <svg className="ml-2 h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"
+                      />
+                    </svg>
+                  </a>
+                  <a
+                    href="tel:+56912345678"
+                    className="inline-flex items-center justify-center border-2 border-[#ff8c00] text-[#ff8c00] px-6 py-3 rounded-lg font-semibold hover:bg-[#ff8c00] hover:text-white transition-colors"
+                  >
+                    Llamar Ahora
+                    <svg className="ml-2 h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+                      />
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}  
+
 
       {/* Descripción */}
       <div className="container mx-auto px-4 py-12">
