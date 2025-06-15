@@ -1,8 +1,9 @@
-"use client"
+"use client";
 
 import Link from "next/link"
 import { ArrowLeft, ChevronLeft, Download } from "lucide-react"
-import { useState } from "react"
+import { use, useState } from "react"
+import { useParams } from "next/navigation";
 
 
 // Datos de servicios
@@ -17,7 +18,7 @@ const services = [
       description:
         "Tecnología de vanguardia para fabricar piezas con propiedades mecánicas excepcionales, combinando la versatilidad de la fabricación aditiva con la resistencia de los materiales compuestos.",
       headerImage: "/images/impresion3d/imp3d2.png",
-      // Reemplazamos las secciones anteriores por la nueva sección de "Partes y Piezas"
+
       partesYPiezas: {
         title: "Partes y Piezas",
         description:
@@ -235,10 +236,10 @@ const services = [
     id: 2,
     title: "Ingeniería y Diseño",
     slug: "ingenieria-y-diseno",
-    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/ING-6ol3FyVea9IAd91519Ad92EvTPJpbd.png",
+    image: "/images/IngenieriayDiseño.png",
     content: {
       description: "Servicios profesionales de ingeniería mecánica y diseño industrial.",
-      headerImage: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-EVZaHEekZKQh3CWyuPs5PYWs6g6Rmi.png",
+      headerImage: "/images/IngenieriayDiseño.png",
       sections: [
         {
           title: "Memoria de Cálculo",
@@ -351,55 +352,13 @@ const services = [
     id: 4,
     title: "Fabricación",
     slug: "fabricacion",
-    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/impre%203d%20p-3UVEq4DM1oqzBiLI8So9TbaCy3khHv.png",
+    image: "/images/FabricacionPiping.png",
     content: {
-      description: "Servicios especializados de fabricación de piezas y componentes industriales.",
-      headerImage:
-        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/impre%203d%20p-3UVEq4DM1oqzBiLI8So9TbaCy3khHv.png",
-      sections: [
-        {
-          title: "Fabricación de Componentes",
-          icon: "/modern-manufacturing-facility.png",
-          image: "/placeholder.svg?key=wyqg2",
-          description: "Producción de componentes mecánicos de alta precisión para diversas aplicaciones industriales.",
-        },
-        {
-          title: "Piezas a Medida",
-          icon: "/custom-parts.png",
-          image: "/custom-manufacturing-facility.png",
-          description: "Fabricación personalizada según especificaciones exactas del cliente.",
-        },
-        {
-          title: "Producción en Serie",
-          icon: "/industrial-production-line.png",
-          image: "/batch-production.png",
-          description: "Capacidad para producir series medianas con consistencia y calidad garantizada.",
-        },
-      ],
-      features: [
-        {
-          title: "Nuestras Capacidades",
-          items: [
-            {
-              title: "Precisión Garantizada",
-              description: "Fabricamos con tolerancias mínimas para asegurar el perfecto funcionamiento",
-              icon: "/precision-target.png",
-            },
-            {
-              title: "Materiales de Calidad",
-              description: "Utilizamos los mejores materiales para garantizar durabilidad y rendimiento",
-              icon: "/diverse-art-materials.png",
-            },
-            {
-              title: "Personalización Total",
-              description: "Adaptamos cada proyecto a las necesidades específicas de nuestros clientes",
-              icon: "/customization-options.png",
-            },
-          ],
-        },
-      ],
       description:
-        "En nuestra empresa contamos con personal altamente acidifico desde 5G hasta 6G, con experiencia en materiales especiales como Super Dúplex y titanio. El área de Fabricación o calderería cuenta con un área de 330 m²2  exclusiva para la fabricación estructural y piping.",
+        "Servicios especializados de fabricación industrial con tecnología avanzada y personal altamente calificado para proyectos de gran envergadura.",
+      headerImage:
+        "/images/FabricacionPiping.png",
+      fullDescription: `En nuestra empresa contamos con personal altamente acidifico desde 5G hasta 6G, con experiencia en materiales especiales como Super Dúplex y titanio. El área de Fabricación o calderería cuenta con un área de 330 m²2  exclusiva para la fabricación estructural y piping. `,
     },
   },
   {
@@ -411,7 +370,7 @@ const services = [
       description: "Servicios de reparación, mantenimiento y arriendo de equipos hidráulicos industriales.",
       headerImage: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-xr5nOsYC8TZRNPVh2NI7gzW1eBGoSs.png",
       sections: [
-       
+
       ],
       features: [
 
@@ -501,8 +460,11 @@ const services = [
   },
 ]
 
-export default function ServicePage({ params }: { params: { slug: string } }) {
-  const service = services.find((s) => s.slug === params.slug)
+
+export default function ServicePage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = useParams();
+  const [open, setOpen] = useState(false);
+  const service = services.find((s) => s.slug === slug);
   const [isEquipmentListOpen, setIsEquipmentListOpen] = useState(false)
 
   // Si no se encuentra el servicio, mostrar una página genérica en lugar de 404
@@ -953,7 +915,7 @@ export default function ServicePage({ params }: { params: { slug: string } }) {
                                 <line x1="9" y1="9" x2="15" y2="15" />
                                 <line x1="15" y1="9" x2="9" y2="15" />
                               </svg>
-                            )                          ) : service.slug === "ingenieria-y-diseno" ? (
+                            )) : service.slug === "ingenieria-y-diseno" ? (
                               itemIndex === 0 ? (
                                 <svg
                                   xmlns="http://www.w3.org/2000/svg"
@@ -1003,7 +965,7 @@ export default function ServicePage({ params }: { params: { slug: string } }) {
                                   <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" />
                                 </svg>
                               )
-                          ) : (
+                            ) : (
                             <img
                               src={item.icon || "/placeholder.svg"}
                               alt={item.title}
@@ -1065,8 +1027,8 @@ export default function ServicePage({ params }: { params: { slug: string } }) {
 
             <div className="max-w-4xl mx-auto">
               <div className="bg-white border-4 border-black rounded-lg overflow-hidden shadow-lg">
-              <button
-                  onClick={() => setIsEquipmentListOpen(!isEquipmentListOpen)}
+                <button
+                  onClick={() => setOpen(!open)}
                   className="w-full bg-gray-200 border-b-2 border-black p-4 hover:bg-gray-300 transition-colors flex items-center justify-between"
                 >
                   <h3 className="text-xl font-bold text-black">
@@ -1074,12 +1036,11 @@ export default function ServicePage({ params }: { params: { slug: string } }) {
                   </h3>
                   <div className="flex items-center space-x-2">
                     <span className="text-sm text-gray-600">
-                      {isEquipmentListOpen ? "Ocultar lista" : `Ver ${24} equipos disponibles`}
+                      {open ? "Ocultar lista" : `Ver ${24} equipos disponibles`}
                     </span>
                     <svg
-                      className={`h-6 w-6 text-black transition-transform duration-300 ${
-                        isEquipmentListOpen ? "rotate-180" : ""
-                      }`}
+                      className={`h-6 w-6 text-black transition-transform duration-300 ${open ? "rotate-180" : ""
+                        }`}
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
@@ -1089,129 +1050,130 @@ export default function ServicePage({ params }: { params: { slug: string } }) {
                   </div>
                 </button>
                 <div
-                  className={`transition-all duration-500 ease-in-out overflow-hidden ${
-                    isEquipmentListOpen ? "max-h-[1200px] opacity-100" : "max-h-0 opacity-0"
-                  }`}
+                  className={`transition-all duration-500 ease-in-out overflow-hidden ${open ? "max-h-[1200px] opacity-100" : "max-h-0 opacity-0"
+                    }`}
                 >
                 </div>
 
-                <div className="divide-y-2 divide-black">
-                  {[
-                    "B-RAD 1000",
-                    "DB-RAD 1000 NGX CORTA Y LARGA",
-                    "RAD 1800",
-                    "RAD 34GX",
-                    "RAD 60DX",
-                    "B-RAD 1500-2",
-                    "B-RAD 5000",
-                    "E-RAD 2500",
-                    "E-RAD 3000",
-                    "GATA ENERPAC 200TON, PRASA20016",
-                    "GATA ENERPAC 200TON, PRASA20027",
-                    "BOMBAS ELECTRO-HIDRAULICAS 10.000PSI TORQUE C/MANGUERA",
-                    "CABEZAL 3MXT",
-                    "CABEZAL 5MXT",
-                    "CABEZAL 10MXT",
-                    'LLAVE IMPACTO BATERIA 3/4"',
-                    'LLAVE DE IMPACTO BATERIA 1/2"',
-                    'LLAVE DE IMPACTO ELECTRICA 3/4"',
-                    'LLAVE DE IMPACTO ELECTRICA 1/2"',
-                    "CABEZAL TIPO CASSETE LINK 70 A 95MM",
-                    "CABEZAL TIPO CASSETE LINK 55MM",
-                    "CILINDRO VARIOS HASTA 100 TONS",
-                    "BOMBAS MANUAL TIPO P-80",
-                    "CARGADOR PARTIDOR BOOSTER 12V A 24V",
-                  ].map((equipo, index) => (
-                    <div key={index} className="p-4 hover:bg-gray-50 transition-colors">
-                      <div className="flex items-center justify-between">
-                        <span className="font-medium text-gray-800">{equipo}</span>
-                        <div className="flex items-center space-x-2">
-                          <span className="inline-block w-3 h-3 bg-green-500 rounded-full"></span>
-                          <span className="text-sm text-green-600 font-medium">Disponible</span>
+                {open && (
+                  <div className="divide-y-2 divide-black">
+                    {[
+                      "B-RAD 1000",
+                      "DB-RAD 1000 NGX CORTA Y LARGA",
+                      "RAD 1800",
+                      "RAD 34GX",
+                      "RAD 60DX",
+                      "B-RAD 1500-2",
+                      "B-RAD 5000",
+                      "E-RAD 2500",
+                      "E-RAD 3000",
+                      "GATA ENERPAC 200TON, PRASA20016",
+                      "GATA ENERPAC 200TON, PRASA20027",
+                      "BOMBAS ELECTRO-HIDRAULICAS 10.000PSI TORQUE C/MANGUERA",
+                      "CABEZAL 3MXT",
+                      "CABEZAL 5MXT",
+                      "CABEZAL 10MXT",
+                      'LLAVE IMPACTO BATERIA 3/4"',
+                      'LLAVE DE IMPACTO BATERIA 1/2"',
+                      'LLAVE DE IMPACTO ELECTRICA 3/4"',
+                      'LLAVE DE IMPACTO ELECTRICA 1/2"',
+                      "CABEZAL TIPO CASSETE LINK 70 A 95MM",
+                      "CABEZAL TIPO CASSETE LINK 55MM",
+                      "CILINDRO VARIOS HASTA 100 TONS",
+                      "BOMBAS MANUAL TIPO P-80",
+                      "CARGADOR PARTIDOR BOOSTER 12V A 24V",
+                    ].map((equipo, index) => (
+                      <div key={index} className="p-4 hover:bg-gray-50 transition-colors">
+                        <div className="flex items-center justify-between">
+                          <span className="font-medium text-gray-800">{equipo}</span>
+                          <div className="flex items-center space-x-2">
+                            <span className="inline-block w-3 h-3 bg-green-500 rounded-full"></span>
+                            <span className="text-sm text-green-600 font-medium">Disponible</span>
+                          </div>
+                        </div>
+                      </div>
+                    ))}
+
+                    <div className="p-4 bg-[#ff8c00] text-white">
+                      <div className="flex items-start space-x-3">
+                        <svg
+                          className="h-6 w-6 mt-0.5 flex-shrink-0"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={2}
+                            d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                          />
+                        </svg>
+                        <div>
+                          <p className="font-semibold">CONSULTAR POR SU EQUIPO</p>
+                          <p className="text-sm text-orange-100">YA QUE TENEMOS SEMANAL UN INGRESO NUEVO</p>
                         </div>
                       </div>
                     </div>
-                  ))}
-
-                  <div className="p-4 bg-[#ff8c00] text-white">
-                    <div className="flex items-start space-x-3">
-                      <svg
-                        className="h-6 w-6 mt-0.5 flex-shrink-0"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={2}
-                          d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-                        />
-                      </svg>
-                      <div>
-                        <p className="font-semibold">CONSULTAR POR SU EQUIPO</p>
-                        <p className="text-sm text-orange-100">YA QUE TENEMOS SEMANAL UN INGRESO NUEVO</p>
-                        </div>
-                      </div>
-                    </div>
                   </div>
-                </div>
+                )}
               </div>
-
-              <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div className="bg-gray-100 p-6 rounded-lg text-center">
-                  <div className="w-16 h-16 bg-[#ff8c00] rounded-full flex items-center justify-center mx-auto mb-4">
-                    <svg className="h-8 w-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
-                      />
-                    </svg>
-                  </div>
-                  <h4 className="font-bold text-lg mb-2">Disponibilidad Inmediata</h4>
-                  <p className="text-gray-600">Equipos listos para entrega el mismo día</p>
-                </div>
-
-                <div className="bg-gray-100 p-6 rounded-lg text-center">
-                  <div className="w-16 h-16 bg-[#ff8c00] rounded-full flex items-center justify-center mx-auto mb-4">
-                    <svg className="h-8 w-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
-                      />
-                    </svg>
-                  </div>
-                  <h4 className="font-bold text-lg mb-2">Equipos Certificados</h4>
-                  <p className="text-gray-600">Todos nuestros equipos están calibrados y certificados</p>
-                </div>
-
-                <div className="bg-gray-100 p-6 rounded-lg text-center">
-                  <div className="w-16 h-16 bg-[#ff8c00] rounded-full flex items-center justify-center mx-auto mb-4">
-                    <svg className="h-8 w-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192L5.636 18.364M12 2.25a9.75 9.75 0 109.75 9.75A9.75 9.75 0 0012 2.25z"
-                      />
-                    </svg>
-                  </div>
-                  <h4 className="font-bold text-lg mb-2">Soporte Técnico</h4>
-                  <p className="text-gray-600">Asesoría especializada durante todo el período de arriendo</p>
-                </div>
-              </div>
-
-              
             </div>
+
+            <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6">
+              <div className="bg-gray-100 p-6 rounded-lg text-center">
+                <div className="w-16 h-16 bg-[#ff8c00] rounded-full flex items-center justify-center mx-auto mb-4">
+                  <svg className="h-8 w-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
+                    />
+                  </svg>
+                </div>
+                <h4 className="font-bold text-lg mb-2">Disponibilidad Inmediata</h4>
+                <p className="text-gray-600">Equipos listos para entrega el mismo día</p>
+              </div>
+
+              <div className="bg-gray-100 p-6 rounded-lg text-center">
+                <div className="w-16 h-16 bg-[#ff8c00] rounded-full flex items-center justify-center mx-auto mb-4">
+                  <svg className="h-8 w-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                    />
+                  </svg>
+                </div>
+                <h4 className="font-bold text-lg mb-2">Equipos Certificados</h4>
+                <p className="text-gray-600">Todos nuestros equipos están calibrados y certificados</p>
+              </div>
+
+              <div className="bg-gray-100 p-6 rounded-lg text-center">
+                <div className="w-16 h-16 bg-[#ff8c00] rounded-full flex items-center justify-center mx-auto mb-4">
+                  <svg className="h-8 w-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192L5.636 18.364M12 2.25a9.75 9.75 0 109.75 9.75A9.75 9.75 0 0012 2.25z"
+                    />
+                  </svg>
+                </div>
+                <h4 className="font-bold text-lg mb-2">Soporte Técnico</h4>
+                <p className="text-gray-600">Asesoría especializada durante todo el período de arriendo</p>
+              </div>
+            </div>
+
+
           </div>
+        </div>
 
       )}
 
-            {/* Sección de Servicios Mejorada */}
+      {/* Sección de Servicios Mejorada */}
       {service.slug === "reparacion-arrendo-equipos-hidraulicos" && (
         <div className="bg-gray-100 py-16">
           <div className="container mx-auto px-4">
@@ -1542,18 +1504,447 @@ export default function ServicePage({ params }: { params: { slug: string } }) {
             </div>
           </div>
         </div>
-      )}  
+      )}
+      {/* Sección Especial para Fabricación */}
+      {service.slug === "fabricacion" && (
+        <>
+          {/* Servicios de Fabricación */}
+          <div className="bg-white py-16">
+            <div className="container mx-auto px-4">
+              <div className="text-center mb-12">
+                <h2 className="text-4xl font-bold mb-4">
+                  <span className="text-proyecta-dark">Nuestras </span>
+                  <span className="text-[#ff8c00]">Especialidades</span>
+                </h2>
+                <p className="text-xl text-gray-700 max-w-4xl mx-auto">
+                  Fabricación industrial de alta complejidad con soldadores certificados 6G y tecnología avanzada
+                </p>
+              </div>
 
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
+                <div className="space-y-8">
+                  <div className="bg-gray-50 rounded-lg p-6 hover:shadow-lg transition-shadow">
+                    <div className="flex items-start space-x-4">
+                      <div className="w-16 h-16 bg-[#ff8c00] rounded-lg flex items-center justify-center flex-shrink-0">
+
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                          stroke-linejoin="round" className="h-8 w-8 text-white">
+                          <path d="M10 18a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H5a3 3 0 0 1-3-3 1 1 0 0 1 1-1z" />
+                          <path d="M13 10H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a1 1 0 0 1 1 1v6a1 1 0 0 1-1 1l-.81 3.242a1 1 0 0 1-.97.758H8" />
+                          <path d="M14 4h3a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-3" />
+                          <path d="M18 6h4" />
+                          <path d="m5 10-2 8" />
+                          <path d="m7 18 2-8" />
+                        </svg>
+
+
+                      </div>
+                      <div>
+                        <h3 className="text-xl font-bold mb-2 text-gray-800">Fabricación de Spool</h3>
+                        <p className="text-gray-600">
+                          Fabricación de estructuras especializadas para transporte y manejo de materiales industriales
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="bg-gray-50 rounded-lg p-6 hover:shadow-lg transition-shadow">
+                    <div className="flex items-start space-x-4">
+                      <div className="w-16 h-16 bg-[#ff8c00] rounded-lg flex items-center justify-center flex-shrink-0">
+                        <svg className="h-8 w-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={2}
+                            d="M10.325 4.317c.42.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"
+                          />
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={2}
+                            d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
+                          />
+                        </svg>
+                      </div>
+                      <div>
+                        <h3 className="text-xl font-bold mb-2 text-gray-800">Reparación de bombas y motores</h3>
+                        <p className="text-gray-600">
+                          Nos dedicamos a ofrecer soluciones rápidas y efectivas para la reparación de bombas y motores.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="bg-gray-50 rounded-lg p-6 hover:shadow-lg transition-shadow">
+                    <div className="flex items-start space-x-4">
+                      <div className="w-16 h-16 bg-[#ff8c00] rounded-lg flex items-center justify-center flex-shrink-0">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" className="h-8 w-8 text-white">
+                          <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z" />
+                        </svg>
+                      </div>
+                      <div>
+                        <h3 className="text-xl font-bold mb-2 text-gray-800">Reparación de Excitatriz</h3>
+                        <p className="text-gray-600">
+                          Contamos con personal con experiencia de la mas alta calidad en reparación de equipos industriales como reductores, excitatrices.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="space-y-6">
+                  <div className="bg-gradient-to-br from-[#ff8c00] to-[#e67e00] rounded-lg p-8 text-white">
+                    <h3 className="text-2xl font-bold mb-4">⚡ SOLDADURA ESPECIALIZADA</h3>
+                    <div className="space-y-3">
+                      <div className="flex items-center space-x-3">
+                        <div className="w-2 h-2 bg-white rounded-full"></div>
+                        <span>Soldadores certificados 6G</span>
+                      </div>
+                      <div className="flex items-center space-x-3">
+                        <div className="w-2 h-2 bg-white rounded-full"></div>
+                        <span>Mecánicos con experiencia en mantenimiento industrial minero</span>
+                      </div>
+                      <div className="flex items-center space-x-3">
+                        <div className="w-2 h-2 bg-white rounded-full"></div>
+                        <span>Certificaciones de calidad industrial</span>
+                      </div>
+                      <div className="flex items-center space-x-3">
+                        <div className="w-2 h-2 bg-white rounded-full"></div>
+                        <span>Soldadura en materiales especiales (inoxidables, duplex, súper duplex)</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="bg-gray-100 rounded-lg p-6">
+                    <div className="flex items-center justify-between">
+                      <div className="flex-1">
+                        <h4 className="font-bold text-lg mb-4 text-gray-800">Proyectos de Fabricación</h4>
+                        <div className="space-y-2 text-sm text-gray-700">
+                          <div className="flex items-center space-x-2">
+                            <div className="w-1.5 h-1.5 bg-[#ff8c00] rounded-full"></div>
+                            <span>Estructura Móvil Especializada</span>
+                          </div>
+                          <div className="flex items-center space-x-2">
+                            <div className="w-1.5 h-1.5 bg-[#ff8c00] rounded-full"></div>
+                            <span>Tuberías de Gran Diámetro</span>
+                          </div>
+                          <div className="flex items-center space-x-2">
+                            <div className="w-1.5 h-1.5 bg-[#ff8c00] rounded-full"></div>
+                            <span>Tolvas Industriales</span>
+                          </div>
+                          <div className="flex items-center space-x-2">
+                            <div className="w-1.5 h-1.5 bg-[#ff8c00] rounded-full"></div>
+                            <span>Proyectos de infraestructura de gran envergadura</span>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="ml-8 flex items-center">
+                        <a
+                          href="/#proyectos"
+                          className="inline-flex items-center justify-center bg-[#ff8c00] text-white px-4 py-2 rounded-lg font-semibold hover:bg-[#e67e00] transition-colors text-sm">
+                          Ver Proyectos
+                          <svg className="ml-2 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              strokeWidth={2}
+                              d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                            />
+                          </svg>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Galería de Proyectos de Fabricación */}
+          {/*<div className="bg-gray-50 py-16">
+            <div className="container mx-auto px-4">
+              <div className="text-center mb-12">
+                <h2 className="text-4xl font-bold mb-4">
+                  <span className="text-proyecta-dark">Galería de </span>
+                  <span className="text-[#ff8c00]">Proyectos</span>
+                </h2>
+                <p className="text-xl text-gray-700 max-w-4xl mx-auto">
+                  Ejemplos de nuestros trabajos de fabricación industrial de alta complejidad
+                </p>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
+                  <div className="aspect-video overflow-hidden">
+                    <img
+                      src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Imagen_de_WhatsApp_2025-03-07_a_las_18.21.40_b6b49257-removebg-preview-MdnMVI3LYWVIa2ffYwK3Z9pJtTnpkK.png"
+                      alt="Estructura móvil para manejo de materiales"
+                      className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                    />
+                  </div>
+                  <div className="p-6">
+                    <h3 className="font-bold text-lg mb-2 text-gray-800">Estructura Móvil Especializada</h3>
+                    <p className="text-gray-600 text-sm">
+                      Fabricación de estructura amarilla móvil para transporte y manejo de materiales industriales
+                    </p>
+                  </div>
+                </div>
+
+                <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
+                  <div className="aspect-video overflow-hidden">
+                    <img
+                      src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Imagen%20de%20WhatsApp%202025-05-08%20a%20las%2017.03.18_93d5b40e.jpg-VC10k0IwBJhZytAPUevh7WEbhvEeZb.jpeg"
+                      alt="Tubería de gran diámetro con bridas"
+                      className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                    />
+                  </div>
+                  <div className="p-6">
+                    <h3 className="font-bold text-lg mb-2 text-gray-800">Tuberías de Gran Diámetro</h3>
+                    <p className="text-gray-600 text-sm">
+                      Fabricación e instalación de sistemas de tuberías industriales con bridas especializadas
+                    </p>
+                  </div>
+                </div>
+
+                <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
+                  <div className="aspect-video overflow-hidden">
+                    <img
+                      src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Imagen%20de%20WhatsApp%202025-05-08%20a%20las%2017.03.18_7c4a3ec6.jpg-AifwUbU3Kp1MELtwjc95Htt2ZH6xLg.jpeg"
+                      alt="Infraestructura de tuberías"
+                      className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                    />
+                  </div>
+                  <div className="p-6">
+                    <h3 className="font-bold text-lg mb-2 text-gray-800">Infraestructura Industrial</h3>
+                    <p className="text-gray-600 text-sm">
+                      Proyectos de gran envergadura para instalación de infraestructura de tuberías
+                    </p>
+                  </div>
+                </div>
+
+                <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
+                  <div className="aspect-video overflow-hidden">
+                    <img
+                      src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/soldador-PVaprnu48xwwlnU547gN0vebufxELn.png"
+                      alt="Soldadura especializada"
+                      className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                    />
+                  </div>
+                  <div className="p-6">
+                    <h3 className="font-bold text-lg mb-2 text-gray-800">Soldadura Especializada</h3>
+                    <p className="text-gray-600 text-sm">
+                      Procesos de soldadura con soldadores certificados 6G para estructuras críticas
+                    </p>
+                  </div>
+                </div>
+
+                <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
+                  <div className="aspect-video overflow-hidden">
+                    <img
+                      src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/turbo-wPkQTcMC6BmJuKtTYFMWw3huu8FXRV.png"
+                      alt="Impulsor de turbina mecanizado"
+                      className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                    />
+                  </div>
+                  <div className="p-6">
+                    <h3 className="font-bold text-lg mb-2 text-gray-800">Mecanizado de Precisión</h3>
+                    <p className="text-gray-600 text-sm">
+                      Fabricación de impulsores de turbina con acabados especializados y tolerancias exactas
+                    </p>
+                  </div>
+                </div>
+
+                <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
+                  <div className="aspect-video overflow-hidden">
+                    <img
+                      src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Sector-energetico.-Fabricacion-de-tolvas-I-1024x677.jpg-7krzHszp7ZMDoza2S9BPpSgtckmQiF.jpeg"
+                      alt="Tolvas para sector energético"
+                      className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                    />
+                  </div>
+                  <div className="p-6">
+                    <h3 className="font-bold text-lg mb-2 text-gray-800">Tolvas Industriales</h3>
+                    <p className="text-gray-600 text-sm">
+                      Fabricación de tolvas metálicas para aplicaciones en sector energético y minero
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div> 
+          */}
+
+          {/* Brochure de Servicios */}
+          <div className="bg-white py-16">
+            <div className="container mx-auto px-4">
+              <div className="max-w-4xl mx-auto">
+                <div className="text-center mb-12">
+                  <h2 className="text-4xl font-bold mb-4">
+                    <span className="text-proyecta-dark">Catálogo de </span>
+                    <span className="text-[#ff8c00]">Servicios</span>
+                  </h2>
+                  <p className="text-xl text-gray-700">
+                    Conoce en detalle nuestros servicios de fabricación y reparación industrial
+                  </p>
+                </div>
+
+                <div className="bg-gray-50 rounded-lg p-8 shadow-lg">
+                  <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+                    <div>
+                      <img
+                        src="/images/generada2.png"
+                        alt="Brochure de servicios de fabricación"
+                        className="w-full rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300"
+                      />
+                    </div>
+                    <div className="space-y-6">
+                      <h3 className="text-2xl font-bold text-gray-800">FABRICACIÓN Y REPARACIÓN</h3>
+                      <div className="space-y-4">
+                        <div className="flex items-start space-x-3">
+                          <div className="w-6 h-6 bg-[#ff8c00] rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                            <span className="text-white text-sm font-bold">01</span>
+                          </div>
+                          <div>
+                            <h4 className="font-bold text-lg text-gray-800">Fabricación de Spool</h4>
+                            <p className="text-gray-600">
+                              Equipo de soldadores profesionales con amplia experiencia en fabricación de spool en
+                              materiales como inoxidables, duplex y súper duplex
+                            </p>
+                          </div>
+                        </div>
+                        <div className="flex items-start space-x-3">
+                          <div className="w-6 h-6 bg-[#ff8c00] rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                            <span className="text-white text-sm font-bold">02</span>
+                          </div>
+                          <div>
+                            <h4 className="font-bold text-lg text-gray-800">Reparación de Bombas y Motores</h4>
+                            <p className="text-gray-600">
+                              Servicios especializados de reparación y mantenimiento de equipos industriales críticos
+                            </p>
+                          </div>
+                        </div>
+                        <div className="flex items-start space-x-3">
+                          <div className="w-6 h-6 bg-[#ff8c00] rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                            <span className="text-white text-sm font-bold">03</span>
+                          </div>
+                          <div>
+                            <h4 className="font-bold text-lg text-gray-800">Reparación de Excitatriz</h4>
+                            <p className="text-gray-600">
+                              Personal con experiencia en mantenimiento industrial minero para equipos eléctricos
+                              especializados
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Contacto Especializado para Fabricación */}
+          <div className="bg-gradient-to-r from-[#ff8c00] to-[#e67e00] py-16">
+            <div className="container mx-auto px-4">
+              <div className="max-w-4xl mx-auto text-center text-white">
+                <h2 className="text-4xl font-bold mb-6">¿Tienes un proyecto de fabricación?</h2>
+                <p className="text-xl mb-8 opacity-90">
+                  Nuestro equipo de soldadores certificados 6G y mecánicos especializados está listo para abordar
+                  proyectos de alta complejidad
+                </p>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+                  <div className="bg-white/10 rounded-lg p-6 backdrop-blur-sm">
+                    <h3 className="font-bold text-lg mb-4">📞 CONTACTO DIRECTO</h3>
+                    <div className="space-y-2">
+                      <a
+                        href="tel:+56964551759"
+                        className="block text-lg font-semibold hover:text-orange-200 transition-colors"
+                      >
+                        +56 9 6455 1759
+                      </a>
+                      <a
+                        href="tel:+56953609309"
+                        className="block text-lg font-semibold hover:text-orange-200 transition-colors"
+                      >
+                        +56 9 5360 9309
+                      </a>
+                    </div>
+                  </div>
+
+                  <div className="bg-white/10 rounded-lg p-6 backdrop-blur-sm">
+                    <h3 className="font-bold text-lg mb-4">📧 CORREOS ESPECIALIZADOS</h3>
+                    <div className="space-y-2">
+                      <a
+                        href="mailto:ventas@proyecta3d.cl"
+                        className="block text-lg font-semibold hover:text-orange-200 transition-colors"
+                      >
+                        ventas@proyecta3d.cl
+                      </a>
+                      <a
+                        href="mailto:cgarcia@proyecta3d.cl"
+                        className="block text-lg font-semibold hover:text-orange-200 transition-colors"
+                      >
+                        cgarcia@proyecta3d.cl
+                      </a>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                  <a
+                    href="/#contacto"
+                    className="inline-flex items-center justify-center bg-white text-[#ff8c00] px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+                  >
+                    Solicitar Cotización
+                    <svg className="ml-2 h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                    </svg>
+                  </a>
+                {/*Boton Vistitar WEB*/}                
+                  {/*<a
+                    href="https://www.proyecta3d.cl"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center justify-center border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-[#ff8c00] transition-colors"
+                  >
+                    Visitar Web
+                    <svg className="ml-2 h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                      />
+                    </svg>
+                  </a>*/}
+                </div>
+              </div>
+            </div>
+          </div>
+        </>
+      )}
 
       {/* Descripción */}
-      <div className="container mx-auto px-4 py-12">
-        <div className="mx-auto max-w-3xl">
-          <div className="rounded-lg bg-gray-100 p-8">
-            <div className="mb-4 h-1 w-20 bg-[#ff8c00]"></div>
-            <div className="whitespace-pre-line text-gray-700">{service.content.description}</div>
+      {service.slug === "fabricacion" ? (
+        <div className="container mx-auto px-4 py-12">
+          <div className="mx-auto max-w-3xl">
+            <div className="rounded-lg bg-gray-100 p-8">
+              <div className="mb-4 h-1 w-20 bg-[#ff8c00]"></div>
+              <div className="whitespace-pre-line text-gray-700">{service.content.fullDescription}</div>
+            </div>
           </div>
         </div>
-      </div>
+      ) : (
+        <div className="container mx-auto px-4 py-12">
+          <div className="mx-auto max-w-3xl">
+            <div className="rounded-lg bg-gray-100 p-8">
+              <div className="mb-4 h-1 w-20 bg-[#ff8c00]"></div>
+              <div className="whitespace-pre-line text-gray-700">{service.content.description}</div>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   )
 }

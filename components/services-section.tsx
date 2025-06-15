@@ -24,13 +24,13 @@ const services = [
     id: 4,
     title: "Fabricación Estructural/Piping",
     slug: "fabricacion",
-    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/impre%203d%20p-3UVEq4DM1oqzBiLI8So9TbaCy3khHv.png",
+    image: "images/services/soldador.png",
   },
   {
     id: 5,
     title: "Reparación y Arrendo de Equipos Hidráulicos",
     slug: "reparacion-arrendo-equipos-hidraulicos",
-    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-xr5nOsYC8TZRNPVh2NI7gzW1eBGoSs.png",
+    image: "images/services/reparacion.png",
   },
   {
     id: 6,
