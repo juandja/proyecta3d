@@ -88,51 +88,97 @@ const projects = [
     image: "https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?q=80&w=2070&auto=format&fit=crop",
     description: "Diseño e implementación de sistema de ventilación optimizado para entornos industriales.",
   },
+  // NUEVOS PROYECTOS DE DISEÑO
+  {
+    id: 11,
+    title: "Diseño de Sistema Transportador Industrial",
+    category: "diseno",
+    image:
+      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Imagen%20de%20WhatsApp%202025-03-06%20a%20las%2020.14.27_eeac5cff.jpg-4ljBRy9vR33tkw7w3ycZ1NTGydGOkB.jpeg",
+    description:
+      "Modelado 3D de sistema transportador industrial con estructura metálica y componentes especializados para manejo de materiales.",
+  },
   {
     id: 12,
-    title: "Estructura Metálica",
-    category: "ingenieria",
-    image: "https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?q=80&w=2070&auto=format&fit=crop",
-    description: "Cálculo y diseño de estructura metálica para soporte de equipos pesados.",
+    title: "Documentación Técnica y Planos de Ingeniería",
+    category: "diseno",
+    image:
+      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Ingenieria-planos-detalle-850x491.jpg-udH5dIInr0AuGoMjNXSEoFYumijRau.jpeg",
+    description:
+      "Desarrollo de planos técnicos detallados y documentación de ingeniería con especificaciones precisas para fabricación.",
   },
   {
     id: 13,
-    title: "Mecanizado de Precisión",
-    category: "maestranza",
-    image: "https://images.unsplash.com/photo-1612887726773-e64e20cf8410?q=80&w=2070&auto=format&fit=crop",
-    description: "Fabricación de componentes de precisión para maquinaria especializada.",
+    title: "Análisis de Esfuerzos von Mises",
+    category: "diseno",
+    image:
+      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202024-04-23%20at%2012.00.07%20PM-3DngOsstgvw1nwP9LQriV5z0CTXtRv.jpeg",
+    description:
+      "Análisis de elementos finitos para evaluación de esfuerzos von Mises en componentes roscados industriales.",
   },
   {
     id: 14,
-    title: "Moldes Industriales",
+    title: "Análisis de Desplazamientos Estructurales",
     category: "diseno",
-    image: "https://images.unsplash.com/photo-1581093588401-fbb62a02f120?q=80&w=2070&auto=format&fit=crop",
-    description: "Diseño y fabricación de moldes industriales para producción en serie.",
+    image:
+      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202024-04-23%20at%2012.00.47%20PM-ap1DO2RuP2Ewuo74N07ZDoHalU62JO.jpeg",
+    description:
+      "Simulación FEA de desplazamientos (URES) para validación de integridad estructural en componentes críticos.",
   },
   {
     id: 15,
-    title: "Análisis de Elementos Finitos",
+    title: "Escaneo 3D de Instalaciones Industriales",
     category: "diseno",
-    image: "https://images.unsplash.com/photo-1581093198693-b22e7a622cd5?q=80&w=2070&auto=format&fit=crop",
-    description: "Simulación y análisis estructural para validar la integridad de componentes críticos.",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Ndp2a-530x310-2AUMFWx0GoEXyBwREFvXenJoCsRzFJ.png",
+    description:
+      "Digitalización mediante escaneo 3D de instalaciones industriales para ingeniería inversa y documentación.",
   },
   {
     id: 16,
-    title: "Diseño Mecánico 3D",
+    title: "Modelado de Sistemas de Tuberías Complejas",
     category: "diseno",
-    image: "https://images.unsplash.com/photo-1581093458791-9d2b88c00e2f?q=80&w=2070&auto=format&fit=crop",
-    description: "Modelado 3D de componentes mecánicos con alta precisión para fabricación.",
+    image:
+      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202024-12-30%20at%207.09.42%20PM-2CxMJTSfEUKoLvDBw84CB1EKSZbQVi.jpeg",
+    description:
+      "Diseño 3D de sistemas de tuberías industriales complejas con múltiples conexiones y componentes especializados.",
   },
   {
     id: 17,
-    title: "Piezas Industriales Personalizadas",
+    title: "Análisis de Factor de Seguridad (FDS)",
     category: "diseno",
-    image: "https://images.unsplash.com/photo-1581093458791-9d2b88c00e2f?q=80&w=2070&auto=format&fit=crop",
-    description: "Diseño de piezas a medida para aplicaciones industriales específicas.",
+    image:
+      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202024-04-23%20at%2012.01.42%20PM-Ew1ADsxcMQdpBIdiMWMnQEouoTBAmU.jpeg",
+    description:
+      "Evaluación del factor de seguridad mediante análisis FEA para garantizar la confiabilidad de componentes mecánicos.",
+  },
+  {
+    id: 18,
+    title: "Ingeniería de Sistemas con Dimensionado Preciso",
+    category: "diseno",
+    image:
+      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202024-12-30%20at%206.41.54%20PM-CGYWbCuTX6iUeZcxql651HGHBcyz8C.jpeg",
+    description:
+      "Modelado 3D detallado con dimensiones precisas para sistemas de tuberías industriales y componentes asociados.",
+  },
+  {
+    id: 19,
+    title: "Análisis de Deformaciones (ESTRN)",
+    category: "diseno",
+    image:
+      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202024-04-23%20at%2012.01.14%20PM-JHiEQvIrJeVscgaNZLCwWt5SUkBYnN.jpeg",
+    description: "Simulación de deformaciones estructurales para optimización de diseño y validación de tolerancias.",
+  },
+  {
+    id: 20,
+    title: "Digitalización de Maquinaria Industrial",
+    category: "diseno",
+    image:
+      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202024-07-30%20at%2011.45.37%20AM-E58L5MyXDqs8LTqeP1Yq9LTMuv7Old.jpeg",
+    description: "Escaneo 3D avanzado de maquinaria industrial compleja para documentación, mantenimiento y rediseño.",
   },
   // PROYECTOS DE FABRICACIÓN (mantenidos)
   {
-    id: 18,
+    id: 21,
     title: "Fabricación de Tolvas Industriales",
     category: "fabricacion",
     image:
@@ -140,7 +186,7 @@ const projects = [
     description: "Diseño y fabricación de tolvas metálicas para manejo de materiales a granel en la industria minera.",
   },
   {
-    id: 19,
+    id: 22,
     title: "Tuberías de Gran Diámetro",
     category: "fabricacion",
     image:
@@ -148,7 +194,7 @@ const projects = [
     description: "Fabricación e instalación de tuberías industriales de gran diámetro con bridas especializadas.",
   },
   {
-    id: 20,
+    id: 23,
     title: "Estructuras de Manejo de Materiales",
     category: "fabricacion",
     image:
@@ -157,7 +203,7 @@ const projects = [
       "Fabricación de estructuras móviles especializadas para el transporte y manejo de materiales industriales.",
   },
   {
-    id: 21,
+    id: 24,
     title: "Tolvas para Sector Energético",
     category: "fabricacion",
     image:
@@ -165,7 +211,7 @@ const projects = [
     description: "Fabricación de tolvas industriales de alta capacidad para aplicaciones en el sector energético.",
   },
   {
-    id: 22,
+    id: 25,
     title: "Infraestructura de Tuberías",
     category: "fabricacion",
     image:
@@ -173,18 +219,151 @@ const projects = [
     description: "Proyectos de gran envergadura para instalación de infraestructura de tuberías industriales.",
   },
   {
-    id: 23,
+    id: 26,
     title: "Impulsores de Turbina de Precisión",
     category: "fabricacion",
     image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/turbo-uVkJFPiVqWbQfcCgUM6rGb9omSQu1O.png",
     description: "Mecanizado de alta precisión de impulsores para turbinas industriales con acabados especializados.",
   },
   {
-    id: 24,
+    id: 27,
     title: "Procesos de Soldadura Especializada",
     category: "fabricacion",
     image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/soldador-lTVfezZIcMjFuZFt3tSGxE7DKKH4FE.png",
     description: "Soldadura especializada para estructuras críticas con certificaciones de calidad industrial.",
+  },
+  {
+    id: 28,
+    title: "Componentes Mecanizados de Precisión",
+    category: "maestranza",
+    image: "https://proyectaingenieria.com/static/media/img_04.a7f5e44c936981949351.jpg",
+    description: "Fabricación de componentes mecanizados con tolerancias exigentes para la industria automotriz.",
+  },
+  {
+    id: 29,
+    title: "Estructuras Metálicas para Minería",
+    category: "maestranza",
+    image: "https://proyectaingenieria.com/static/media/img_05.93532919526055559c99.jpg",
+    description: "Diseño y fabricación de estructuras metálicas robustas para soportar equipos pesados en la minería.",
+  },
+  {
+    id: 30,
+    title: "Reparación de Maquinaria Pesada",
+    category: "maestranza",
+    image: "https://proyectaingenieria.com/static/media/img_06.0c4a951e960559344665.jpg",
+    description:
+      "Servicios de reparación y mantenimiento de maquinaria pesada para garantizar la continuidad operativa.",
+  },
+  {
+    id: 31,
+    title: "Fabricación de Engranajes Industriales",
+    category: "maestranza",
+    image: "https://proyectaingenieria.com/static/media/img_07.538993c5183330c09965.jpg",
+    description: "Fabricación de engranajes de alta precisión para diversas aplicaciones industriales.",
+  },
+  {
+    id: 32,
+    title: "Mecanizado de Piezas Complejas",
+    category: "maestranza",
+    image: "https://proyectaingenieria.com/static/media/img_08.6954891353348399995a.jpg",
+    description: "Mecanizado de piezas complejas con geometrías intrincadas y tolerancias ajustadas.",
+  },
+  {
+    id: 33,
+    title: "Mantenimiento de Equipos Rotatorios",
+    category: "maestranza",
+    image: "https://proyectaingenieria.com/static/media/img_09.9995595559505a28149c.jpg",
+    description: "Mantenimiento preventivo y correctivo de equipos rotatorios para optimizar su rendimiento.",
+  },
+
+  // NUEVOS PROYECTOS DE ESCANEO 3D Y DIGITALIZACIÓN
+  {
+    id: 34,
+    title: "Escaneo 3D de Válvulas Industriales",
+    category: "diseno",
+    image:
+      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202024-12-22%20at%208.05.32%20PM%20%282%29-BTrf1U5rhAAAyIFcGxSaV0p9LcR2y2.jpeg",
+    description:
+      "Digitalización precisa de válvulas y sistemas de control mediante escaneo 3D para documentación técnica y análisis dimensional.",
+  },
+  {
+    id: 35,
+    title: "Captura 3D de Equipos de Proceso",
+    category: "diseno",
+    image:
+      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202024-12-22%20at%208.05.32%20PM%20%283%29-zSqfwRU1AXixwoh9c6SeG4WW2oH01Z.jpeg",
+    description:
+      "Escaneo tridimensional de equipos industriales complejos con válvulas y conexiones para ingeniería inversa.",
+  },
+  {
+    id: 36,
+    title: "Digitalización de Sistemas de Tuberías",
+    category: "diseno",
+    image:
+      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202024-12-22%20at%208.05.32%20PM%20%281%29-ZNlk9CNjj9TIVnRMzDunfLXSS91gEP.jpeg",
+    description:
+      "Escaneo 3D de alta precisión de sistemas de tuberías industriales con múltiples válvulas y conexiones de control.",
+  },
+  {
+    id: 37,
+    title: "Modelado 3D de Válvulas de Gran Diámetro",
+    category: "diseno",
+    image:
+      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202024-12-22%20at%208.05.33%20PM%20%281%29-pbunWO9JeaOpRzdSie8rHin0XpGcvR.jpeg",
+    description:
+      "Captura tridimensional de válvulas industriales de gran tamaño con sistemas de actuación y control avanzados.",
+  },
+  {
+    id: 38,
+    title: "Escaneo de Válvulas con Actuadores",
+    category: "diseno",
+    image:
+      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202024-12-22%20at%208.05.32%20PM-p0p17NdasZhW3VbF3lKVzTUINg1Njv.jpeg",
+    description:
+      "Digitalización de válvulas industriales con volantes de control y sistemas de actuación para análisis técnico.",
+  },
+  {
+    id: 39,
+    title: "Digitalización de Instalaciones Industriales",
+    category: "diseno",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Ndp1a-530x310-jvvdBRj6YBpK7sX3zCJoDwrLzp0sDq.png",
+    description:
+      "Escaneo 3D completo de instalaciones industriales interiores con estructuras metálicas y equipos especializados.",
+  },
+  {
+    id: 40,
+    title: "Escaneo de Planta Industrial Compleja",
+    category: "diseno",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1729818088356-VBgysWXUt1VEOoedyUdOWQjeWoZ6wK.jpeg",
+    description:
+      "Digitalización integral de planta industrial con múltiples niveles, tuberías y equipos para documentación as-built.",
+  },
+  {
+    id: 41,
+    title: "Captura 3D de Componentes Mecánicos",
+    category: "diseno",
+    image:
+      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202024-12-22%20at%208.05.33%20PM-YmGi1V8HG0Xb3BoNf6FdIyEIJk6QN8.jpeg",
+    description:
+      "Escaneo tridimensional de componentes mecánicos con engranajes y sistemas de transmisión para análisis de precisión.",
+  },
+  {
+    id: 42,
+    title: "Escaneo Láser 3D a Color",
+    category: "diseno",
+    image:
+      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/62f5150985a921a30798ae0c_6268b4f1839c2fdb7b0b2344_escaneo-laser-3d-color-HN0Baihg80U0dkZZ3HPO1lbn4XowTP.jpeg",
+    description:
+      "Digitalización láser 3D con captura de color de instalaciones industriales para documentación visual completa.",
+  },
+  {
+    id: 43,
+    title: "Metrología Dimensional 3D",
+    category: "diseno",
+    image:
+      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202024-12-22%20at%208.05.33%20PM%20%282%29-X3OJ4PhomkRqvdJfefbCR4NThXx6gn.jpeg",
+    description:
+      "Escaneo 3D con mediciones dimensionales precisas de válvulas industriales para control de calidad y verificación.",
   },
 ]
 
