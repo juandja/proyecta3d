@@ -296,11 +296,11 @@ const services = [
     id: 3,
     title: "Maestranza Mecanizado",
     slug: "maestranza-mecanizado",
-    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/MAES-YDzlUOHZHTbzKANBJoWXUSoyG6tJF0.png",
+    image: "",
     content: {
       description:
         "Fabricación y mecanizado de piezas con precisión y calidad para diversas aplicaciones industriales.",
-      headerImage: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/MAES-YDzlUOHZHTbzKANBJoWXUSoyG6tJF0.png",
+      headerImage: "/images/MAES2.png",
       sections: [
         {
           title: "Mecanizado CNC",
@@ -320,28 +320,6 @@ const services = [
           icon: "/placeholder.svg?height=80&width=80",
           image: "/placeholder.svg?height=200&width=200",
           description: "Fabricación de piezas complejas mediante el arranque de viruta con herramientas rotativas.",
-        },
-      ],
-      features: [
-        {
-          title: "Capacidades de Producción",
-          items: [
-            {
-              title: "Materiales Diversos",
-              description: "Trabajamos con acero, aluminio, titanio, plásticos técnicos y más",
-              icon: "/placeholder.svg?height=60&width=60",
-            },
-            {
-              title: "Precisión Garantizada",
-              description: "Tolerancias de hasta 0.01mm en nuestros procesos de mecanizado",
-              icon: "/placeholder.svg?height=60&width=60",
-            },
-            {
-              title: "Producción Flexible",
-              description: "Desde prototipos unitarios hasta series medianas de producción",
-              icon: "/placeholder.svg?height=60&width=60",
-            },
-          ],
         },
       ],
       description:
@@ -1924,6 +1902,427 @@ export default function ServicePage({ params }: { params: Promise<{ slug: string
           </div>
         </>
       )}
+
+  {/* Sección Especial para Maestranza Mecanizado */}
+      {service.slug === "maestranza-mecanizado" && (
+        <>
+          {/* Servicios de Maestranza */}
+          <div className="bg-white py-16">
+            <div className="container mx-auto px-4">
+              <div className="text-center mb-12">
+                <h2 className="text-4xl font-bold mb-4">
+                  <span className="text-proyecta-dark">Nuestros </span>
+                  <span className="text-[#ff8c00]">Servicios de Maestranza</span>
+                </h2>
+                <p className="text-xl text-gray-700 max-w-4xl mx-auto">
+                  Servicios especializados de mecanizado y maestranza con tecnología de precisión y personal altamente
+                  calificado
+                </p>
+              </div>
+
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
+                <div className="space-y-8">
+                  <div className="bg-gray-50 rounded-lg p-6 hover:shadow-lg transition-shadow">
+                    <div className="flex items-start space-x-4">
+                      <div className="w-16 h-16 bg-[#ff8c00] rounded-lg flex items-center justify-center flex-shrink-0">
+                        <svg className="h-8 w-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={2}
+                            d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"
+                          />
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={2}
+                            d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
+                          />
+                        </svg>
+                      </div>
+                      <div>
+                        <h3 className="text-xl font-bold mb-2 text-gray-800">Mecanizado CNC</h3>
+                        <p className="text-gray-600">
+                          Mecanizado de alta precisión con máquinas CNC para componentes críticos y piezas complejas
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="bg-gray-50 rounded-lg p-6 hover:shadow-lg transition-shadow">
+                    <div className="flex items-start space-x-4">
+                      <div className="w-16 h-16 bg-[#ff8c00] rounded-lg flex items-center justify-center flex-shrink-0">
+                        <svg className="h-8 w-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={2}
+                            d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"
+                          />
+                        </svg>
+                      </div>
+                      <div>
+                        <h3 className="text-xl font-bold mb-2 text-gray-800">Fabricación de Engranajes</h3>
+                        <p className="text-gray-600">
+                          Fabricación especializada de engranajes rectos, helicoidales y cónicos con tolerancias de
+                          precisión
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="bg-gray-50 rounded-lg p-6 hover:shadow-lg transition-shadow">
+                    <div className="flex items-start space-x-4">
+                      <div className="w-16 h-16 bg-[#ff8c00] rounded-lg flex items-center justify-center flex-shrink-0">
+                        <svg className="h-8 w-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={2}
+                            d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"
+                          />
+                        </svg>
+                      </div>
+                      <div>
+                        <h3 className="text-xl font-bold mb-2 text-gray-800">Reparación de Maquinaria</h3>
+                        <p className="text-gray-600">
+                          Servicios de reparación y mantenimiento de maquinaria pesada e industrial
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="bg-gray-50 rounded-lg p-6 hover:shadow-lg transition-shadow">
+                    <div className="flex items-start space-x-4">
+                      <div className="w-16 h-16 bg-[#ff8c00] rounded-lg flex items-center justify-center flex-shrink-0">
+                        <svg className="h-8 w-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={2}
+                            d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                          />
+                        </svg>
+                      </div>
+                      <div>
+                        <h3 className="text-xl font-bold mb-2 text-gray-800">Control de Calidad</h3>
+                        <p className="text-gray-600">
+                          Inspección dimensional y control de calidad con equipos de medición de alta precisión
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="space-y-6">
+                  <div className="bg-gradient-to-br from-[#ff8c00] to-[#e67e00] rounded-lg p-8 text-white">
+                    <h3 className="text-2xl font-bold mb-4">⚙️ TECNOLOGÍA AVANZADA</h3>
+                    <div className="space-y-3">
+                      <div className="flex items-center space-x-3">
+                        <div className="w-2 h-2 bg-white rounded-full"></div>
+                        <span>Máquinas CNC de última generación</span>
+                      </div>
+                      <div className="flex items-center space-x-3">
+                        <div className="w-2 h-2 bg-white rounded-full"></div>
+                        <span>Tornos y fresadoras de alta precisión</span>
+                      </div>
+                      <div className="flex items-center space-x-3">
+                        <div className="w-2 h-2 bg-white rounded-full"></div>
+                        <span>Equipos de medición dimensional</span>
+                      </div>
+                      <div className="flex items-center space-x-3">
+                        <div className="w-2 h-2 bg-white rounded-full"></div>
+                        <span>Software CAD/CAM especializado</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="bg-gray-100 rounded-lg p-6">
+                    <div className="flex items-center justify-between">
+                      <div className="flex-1">
+                        <h4 className="font-bold text-lg mb-4 text-gray-800">SERVICIOS ESPECIALIZADOS</h4>
+                        <div className="space-y-2 text-sm text-gray-700">
+                          <div className="flex items-center space-x-2">
+                            <div className="w-1.5 h-1.5 bg-[#ff8c00] rounded-full"></div>
+                            <span>Mecanizado de componentes automotrices</span>
+                          </div>
+                          <div className="flex items-center space-x-2">
+                            <div className="w-1.5 h-1.5 bg-[#ff8c00] rounded-full"></div>
+                            <span>Fabricación de piezas de repuesto</span>
+                          </div>
+                          <div className="flex items-center space-x-2">
+                            <div className="w-1.5 h-1.5 bg-[#ff8c00] rounded-full"></div>
+                            <span>Mantenimiento de equipos rotatorios</span>
+                          </div>
+                          <div className="flex items-center space-x-2">
+                            <div className="w-1.5 h-1.5 bg-[#ff8c00] rounded-full"></div>
+                            <span>Rectificado y acabados superficiales</span>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="ml-8 flex items-center">
+                        <a
+                          href="/#proyectos"
+                          className="inline-flex items-center justify-center bg-[#ff8c00] text-white px-4 py-2 rounded-lg font-semibold hover:bg-[#e67e00] transition-colors text-sm"
+                        >
+                          Ver Proyectos
+                          <svg className="ml-2 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              strokeWidth={2}
+                              d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                            />
+                          </svg>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Galería de Proyectos de Maestranza */}
+          {/*<div className="bg-gray-50 py-16">
+            <div className="container mx-auto px-4">
+              <div className="text-center mb-12">
+                <h2 className="text-4xl font-bold mb-4">
+                  <span className="text-proyecta-dark">Galería de </span>
+                  <span className="text-[#ff8c00]">Trabajos</span>
+                </h2>
+                <p className="text-xl text-gray-700 max-w-4xl mx-auto">
+                  Ejemplos de nuestros trabajos de maestranza y mecanizado de precisión
+                </p>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
+                  <div className="aspect-video overflow-hidden">
+                    <img
+                      src="https://proyectaingenieria.com/static/media/img_04.a7f5e44c936981949351.jpg"
+                      alt="Componentes mecanizados de precisión"
+                      className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                    />
+                  </div>
+                  <div className="p-6">
+                    <h3 className="font-bold text-lg mb-2 text-gray-800">Componentes Mecanizados</h3>
+                    <p className="text-gray-600 text-sm">
+                      Fabricación de componentes mecanizados con tolerancias exigentes para la industria automotriz
+                    </p>
+                  </div>
+                </div>
+
+                <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
+                  <div className="aspect-video overflow-hidden">
+                    <img
+                      src="https://proyectaingenieria.com/static/media/img_05.93532919526055559c99.jpg"
+                      alt="Estructuras metálicas para minería"
+                      className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                    />
+                  </div>
+                  <div className="p-6">
+                    <h3 className="font-bold text-lg mb-2 text-gray-800">Estructuras para Minería</h3>
+                    <p className="text-gray-600 text-sm">
+                      Diseño y fabricación de estructuras metálicas robustas para soportar equipos pesados en minería
+                    </p>
+                  </div>
+                </div>
+
+                <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
+                  <div className="aspect-video overflow-hidden">
+                    <img
+                      src="https://proyectaingenieria.com/static/media/img_06.0c4a951e960559344665.jpg"
+                      alt="Reparación de maquinaria pesada"
+                      className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                    />
+                  </div>
+                  <div className="p-6">
+                    <h3 className="font-bold text-lg mb-2 text-gray-800">Reparación de Maquinaria</h3>
+                    <p className="text-gray-600 text-sm">
+                      Servicios de reparación y mantenimiento de maquinaria pesada para continuidad operativa
+                    </p>
+                  </div>
+                </div>
+
+                <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
+                  <div className="aspect-video overflow-hidden">
+                    <img
+                      src="https://proyectaingenieria.com/static/media/img_07.538993c5183330c09965.jpg"
+                      alt="Fabricación de engranajes industriales"
+                      className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                    />
+                  </div>
+                  <div className="p-6">
+                    <h3 className="font-bold text-lg mb-2 text-gray-800">Engranajes Industriales</h3>
+                    <p className="text-gray-600 text-sm">
+                      Fabricación de engranajes de alta precisión para diversas aplicaciones industriales
+                    </p>
+                  </div>
+                </div>
+
+                <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
+                  <div className="aspect-video overflow-hidden">
+                    <img
+                      src="https://proyectaingenieria.com/static/media/img_08.6954891353348399995a.jpg"
+                      alt="Mecanizado de piezas complejas"
+                      className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                    />
+                  </div>
+                  <div className="p-6">
+                    <h3 className="font-bold text-lg mb-2 text-gray-800">Piezas Complejas</h3>
+                    <p className="text-gray-600 text-sm">
+                      Mecanizado de piezas complejas con geometrías intrincadas y tolerancias ajustadas
+                    </p>
+                  </div>
+                </div>
+
+                <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
+                  <div className="aspect-video overflow-hidden">
+                    <img
+                      src="https://proyectaingenieria.com/static/media/img_09.9995595559505a28149c.jpg"
+                      alt="Mantenimiento de equipos rotatorios"
+                      className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                    />
+                  </div>
+                  <div className="p-6">
+                    <h3 className="font-bold text-lg mb-2 text-gray-800">Equipos Rotatorios</h3>
+                    <p className="text-gray-600 text-sm">
+                      Mantenimiento preventivo y correctivo de equipos rotatorios para optimizar rendimiento
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div> */}
+        </>
+      )}
+      
+            {/* Sección de Capacidades de Producción */}
+      <div className="bg-white py-16">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold mb-4">
+              <span className="text-proyecta-dark">Capacidades de </span>
+              <span className="text-[#ff8c00]">Producción</span>
+            </h2>
+            <p className="text-xl text-gray-700 max-w-4xl mx-auto">
+              Nuestras capacidades técnicas y de fabricación para satisfacer las demandas más exigentes de la industria
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="bg-gray-50 rounded-lg p-6 hover:shadow-lg transition-shadow duration-300">
+              <div className="w-16 h-16 bg-[#ff8c00] rounded-lg flex items-center justify-center mx-auto mb-4">
+                <svg className="h-8 w-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"
+                  />
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
+                  />
+                </svg>
+              </div>
+              <h3 className="text-xl font-bold text-center mb-3 text-gray-800">Fabricación de Engranajes</h3>
+              <p className="text-gray-600 text-center">
+                Mecanizado de precisión de engranajes rectos, helicoidales y cónicos con tolerancias de alta precisión
+              </p>
+            </div>
+
+            <div className="bg-gray-50 rounded-lg p-6 hover:shadow-lg transition-shadow duration-300">
+              <div className="w-16 h-16 bg-[#ff8c00] rounded-lg flex items-center justify-center mx-auto mb-4">
+                <svg className="h-8 w-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"
+                  />
+                </svg>
+              </div>
+              <h3 className="text-xl font-bold text-center mb-3 text-gray-800">Calibradores</h3>
+              <p className="text-gray-600 text-center">
+                Calibradores de 12" hasta de 1Mt
+              </p>
+            </div>
+
+            <div className="bg-gray-50 rounded-lg p-6 hover:shadow-lg transition-shadow duration-300">
+              <div className="w-16 h-16 bg-[#ff8c00] rounded-lg flex items-center justify-center mx-auto mb-4">
+                <svg className="h-8 w-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-bold text-center mb-3 text-gray-800">Alexometros y micrómetro</h3>
+              <p className="text-gray-600 text-center">
+                Instrumentos de medición de alta precisión utilizados en control dimensional.
+              </p>
+            </div>
+
+            <div className="bg-gray-50 rounded-lg p-6 hover:shadow-lg transition-shadow duration-300">
+              <div className="w-16 h-16 bg-[#ff8c00] rounded-lg flex items-center justify-center mx-auto mb-4">
+                <svg className="h-8 w-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"
+                  />
+                </svg>
+              </div>
+              <h3 className="text-xl font-bold text-center mb-3 text-gray-800">Personal de Control de Calidad Certificado</h3>
+              <p className="text-gray-600 text-center">
+                Profesionales especializados en inspección y aseguramiento de la calidad, capacitados y certificados para verificar que los productos cumplan con normas técnicas, tolerancias y estándares industriales.
+              </p>
+            </div>
+
+            <div className="bg-gray-50 rounded-lg p-6 hover:shadow-lg transition-shadow duration-300">
+              <div className="w-16 h-16 bg-[#ff8c00] rounded-lg flex items-center justify-center mx-auto mb-4">
+                <svg className="h-8 w-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 1.657-2.657 1.657-2.657A8 8 0 0118.657 17.657z"
+                  />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 12l4 4m0 0l4-4m-4 4V8" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-bold text-center mb-3 text-gray-800">Operadores de equipo de trabajo altamente calificados</h3>
+              <p className="text-gray-600 text-center">
+                Personal técnico especializado en operación de maquinaria industrial y ejecución de procesos de manufactura, con formación continua y experiencia en el manejo seguro y eficiente de tecnologías avanzadas.
+              </p>
+            </div>  
+          </div>
+
+          <div className="mt-12 text-center">
+            <div className="bg-gradient-to-r from-[#ff8c00] to-[#e67e00] rounded-lg p-8 text-white">
+              <h3 className="text-2xl font-bold mb-4">Capacidades Técnicas Destacadas</h3>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div className="text-center">
+                  <div className="text-3xl font-bold mb-2">±0.01mm</div>
+                  <div className="text-sm opacity-90">Tolerancia de Precisión</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-3xl font-bold mb-2">24/7</div>
+                  <div className="text-sm opacity-90">Servicio de Emergencia</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-3xl font-bold mb-2">6G</div>
+                  <div className="text-sm opacity-90">Certificación de Soldadura</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      
 
       {/* Descripción */}
       {service.slug === "fabricacion" ? (
