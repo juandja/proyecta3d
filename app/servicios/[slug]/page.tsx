@@ -1351,7 +1351,7 @@ export default function ServicePage({ params }: { params: Promise<{ slug: string
               {[
                 {
                   image:
-                    "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/equipo_1-NNWFVGTW7ahkRhg19Ir4K3wrF9NtMB.png",
+                         "/images/Equipos/HerramientadeTorqueconBatería.png",
                   title: "Herramienta de Torque con Batería",
                   description: "Kit completo con maletín protector",
                 },
@@ -1363,7 +1363,7 @@ export default function ServicePage({ params }: { params: Promise<{ slug: string
                 },
                 {
                   image:
-                    "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/equipo_3-DMw6DLDvRlDLOqBuh2pTtvVtgXtkbT.png",
+                    "/images/Equipos/LlavedeImpactoNeumática.png",
                   title: "Llave de Impacto Neumática",
                   description: "Herramienta de alta potencia",
                 },
@@ -1375,7 +1375,7 @@ export default function ServicePage({ params }: { params: Promise<{ slug: string
                 },
                 {
                   image:
-                    "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/equipo_5-maG8kaevoKfioGKKC8DeirwR9OF1iF.png",
+                    "/images/Equipos/LlaveHidráulicaRoja.png",
                   title: "Llave Hidráulica Roja",
                   description: "Herramienta de precisión",
                 },
@@ -1387,25 +1387,25 @@ export default function ServicePage({ params }: { params: Promise<{ slug: string
                 },
                 {
                   image:
-                    "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/equipo_7-WVIM6uISq2Zm6SEUC73TZSTmFdmVs9.png",
+                    "/images/Equipos/CilindroHidráulicoEnerpac.png",
                   title: "Cilindro Hidráulico Enerpac",
                   description: "Cilindro amarillo con documentación",
                 },
                 {
                   image:
-                    "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/equipo_8-IH6M3pwLPX5XXUpb7S2sf4pKzzmYk8.png",
+                    "/images/Equipos/HerramientaRojaconBatería.png",
                   title: "Herramienta Roja con Batería",
                   description: "Kit completo con accesorios",
                 },
                 {
                   image:
-                    "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/equipo_9-Vcb7IiLwTGPrN2OSKjWMVR2b6jVo7s.png",
+                    "/images/Equipos/KitdeHerramientasCompleto.png",
                   title: "Kit de Herramientas Completo",
                   description: "Maletín con múltiples componentes",
                 },
                 {
                   image:
-                    "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/equipo_10-LOHpc4sbaYf9cdw7orwYubHrT4TIb7.png",
+                    "/images/Equipos/BombaHidráulicaconMangueras.png",
                   title: "Bomba Hidráulica con Mangueras",
                   description: "Sistema completo con control",
                 },

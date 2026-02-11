@@ -128,15 +128,15 @@ export default function Footer() {
             <ul className="space-y-4 text-base">
               <li className="flex items-start space-x-2">
                 <MapPin className="h-5 w-5 text-[#ff8c00]" />
-                <span className="font-bold text-white drop-shadow-xl">Santiago, Chile</span>
+                <span className="font-bold text-white drop-shadow-xl">Antofagasta, Chile</span>
               </li>
               <li className="flex items-center space-x-2">
                 <Phone className="h-5 w-5 text-[#ff8c00]" />
-                <span className="font-bold text-white drop-shadow-xl">+56 9 1234 5678</span>
+                <span className="font-bold text-white drop-shadow-xl">(+56 9 645 51 759) (+56 9 536 09 360)</span>
               </li>
               <li className="flex items-center space-x-2">
                 <Mail className="h-5 w-5 text-[#ff8c00]" />
-                <span className="font-bold text-white drop-shadow-xl">contacto@proyecta3d.cl</span>
+                <span className="font-bold text-white drop-shadow-xl">ventas@proyecta3d.cl</span>
               </li>
               <li className="flex space-x-3 pt-2">
                 <Link href="#" className="text-white transition-colors hover:text-[#ff8c00]">

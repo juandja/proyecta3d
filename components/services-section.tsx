@@ -32,12 +32,7 @@ const services = [
     slug: "reparacion-arrendo-equipos-hidraulicos",
     image: "images/services/reparacion.png",
   },
-  {
-    id: 6,
-    title: "Venta de Equipos Hidráulicos",
-    slug: "venta-equipos-hidraulicos",
-    image: "/images/equipos-hidraulicos-hexagonos.png",
-  },
+ 
 ]
 
 export default function ServicesSection() {
